@@ -1,7 +1,108 @@
-body {
-	margin: 0;
-	font-family: "Inter", sans-serif;
-	font-size: $font-base-size;
-	line-height: 1.7;
-	scroll-behavior: smooth;
+// ---- HOME
+
+// Header - Home Background image
+.hero-backgorund-home {
+	background-image: url("../images/home-header.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	min-height: 85vh;
+}
+
+.hero-text {
+	margin-top: 10%;
+
+	.title {
+		font-family: $font-stack-secondary;
+		font-size: 64px;
+		font-weight: 600;
+		line-height: 92px;
+		color: $white;
+		margin-bottom: 3rem;
+	}
+}
+
+/*
+    ----- Sections ----- 
+    */
+.section {
+	padding: 50px 0;
+
+	p {
+		// font-size: 14px;
+		font-weight: 300;
+	}
+
+	// Make read more link uppercase, smaller
+	a.read-more {
+		margin-top: 1rem;
+		text-transform: uppercase;
+		font-family: $font-stack-secondary;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: $primary-color;
+	}
+
+	&-title {
+		font-family: $font-stack-secondary;
+		font-size: 48px;
+		font-weight: 500;
+		color: $primary-color;
+	}
+
+	/*
+    ----- Section 1 - Services ----- 
+    */
+	&-services {
+		.tab-content {
+			padding: 4rem 5rem;
+			color: $white;
+
+			.card {
+				padding: 1.5rem;
+				background: $white;
+				color: $primary-color;
+			}
+		}
+	}
+
+	/*
+    ----- Section 4 - About us ----- 
+    */
+	&-about {
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	/*
+    ----- Section 5 - Features ----- 
+    */
+	&-features {
+		background: $primary-color;
+		color: $white;
+		text-align: left;
+
+		.section-title {
+			color: $white;
+			margin-bottom: 0;
+			line-height: 1.2;
+		}
+		p {
+			margin: 0;
+			font-size: 1.2rem;
+		}
+	}
+
+	/*
+    ----- Section 5 - Contact ----- 
+    */
+	.addresses {
+		line-height: 2em;
+		strong {
+			font-weight: 500;
+		}
+	}
 }

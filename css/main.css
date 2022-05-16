@@ -1,3 +1,205 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.4px 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h5 {
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+ul {
+  margin: 0;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
 /* --------------------------
   *  Varibles for max-screen breakpoint 
 /* --------------------------*/
@@ -7,16 +209,76 @@
 /* --------------------------
   *  MIXINGS
 /* --------------------------*/
-/* --------------------------
-  * :::: Button style properties ::::
-/* --------------------------*/
-.button {
-  padding: 0.7rem 1.5rem;
-  border: 0;
-  border-radius: 6px;
-  opacity: 1;
-  font-size: 0.85rem;
+html {
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Open Sans", "Segoe UI", BlinkMacSystemFont, "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  background: #fcfcfc;
+}
+
+.text-primary {
+  color: #234c87;
+}
+
+.text-secondary {
+  color: #ff5c72;
+}
+
+.text-gray {
+  color: #cfcfcf;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-primary {
+  background: #234c87;
+}
+
+.bg-secondary {
+  background: #ff5c72;
+}
+
+.bg-gray {
+  background: #cfcfcf;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.title,
+.section-title,
+.subtitle {
+  font-family: "Roc Grotesk", sans-serif;
+}
+
+.subtitle {
+  font-size: 32px;
   font-weight: 400;
+}
+
+/* --------------------------
+  * :::: COMPONENTS ::::
+/* --------------------------*/
+/*
+ ---- Buttons----
+ */
+.button {
+  padding: 1.1rem 2.5rem;
+  border: 0;
+  border-radius: 0px;
+  opacity: 1;
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -24,7 +286,6 @@
   transition: all 200ms ease-in-out;
 }
 .button:hover {
-  color: #fff;
   opacity: 0.95;
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
@@ -33,13 +294,175 @@
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
+.button-tertiary {
+  background-color: #fff;
+  color: #234c87;
+}
 
-body {
+/* --------------------------
+  *  Navbar
+/* --------------------------*/
+.navbar {
+  padding: 2rem 0;
+  	/*
+          -Nav list
+         */
+}
+.navbar-brand {
+  		/*
+          -Set elements to display flex and align center
+          -When widht is small wrap the tagline to new line
+         */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navbar-brand .logo {
+  max-width: 300px;
+}
+.navbar-brand .tagline {
+  color: #fff;
+  font-weight: 300;
+}
+.navbar .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+.navbar .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/*
+    ----- Footer ----- 
+    */
+footer {
+  padding: 2rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ff5c72;
+  color: #fff;
+}
+footer img {
+  vertical-align: middle;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: #234c87;
+}
+footer .social-media-icons img {
+  margin-right: 2rem;
+}
+
+.hero-backgorund-home {
+  background-image: url("../images/home-header.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  min-height: 85vh;
+}
+
+.hero-text {
+  margin-top: 10%;
+}
+.hero-text .title {
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 92px;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+/*
+    ----- Sections ----- 
+    */
+.section {
+  padding: 50px 0;
+  	/*
+      ----- Section 1 - Services ----- 
+      */
+  	/*
+      ----- Section 4 - About us ----- 
+      */
+  	/*
+      ----- Section 5 - Features ----- 
+      */
+  	/*
+      ----- Section 5 - Contact ----- 
+      */
+}
+.section p {
+  font-weight: 300;
+}
+.section a.read-more {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #234c87;
+}
+.section-title {
+  font-family: "Roc Grotesk", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #234c87;
+}
+.section-services .tab-content {
+  padding: 4rem 5rem;
+  color: #fff;
+}
+.section-services .tab-content .card {
+  padding: 1.5rem;
+  background: #fff;
+  color: #234c87;
+}
+.section-about img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-features {
+  background: #234c87;
+  color: #fff;
+  text-align: left;
+}
+.section-features .section-title {
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.section-features p {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  scroll-behavior: smooth;
+  font-size: 1.2rem;
+}
+.section .addresses {
+  line-height: 2em;
+}
+.section .addresses strong {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

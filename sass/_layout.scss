@@ -1,0 +1,66 @@
+/* --------------------------
+  *  Navbar
+/* --------------------------*/
+.navbar {
+	padding: 2rem 0;
+	&-brand {
+		/*
+        -Set elements to display flex and align center
+        -When widht is small wrap the tagline to new line
+       */
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		.logo {
+			max-width: 300px;
+		}
+
+		.tagline {
+			// color: $primary-color;
+			color: $white;
+			font-weight: 300;
+		}
+	}
+
+	/*
+        -Nav list
+       */
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		list-style-type: none;
+
+		&-link {
+			color: $white;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+}
+
+/*
+    ----- Footer ----- 
+    */
+footer {
+	padding: 2rem 0;
+	align-items: center;
+	background: $secondary-color;
+	color: $white;
+
+	img {
+		vertical-align: middle;
+	}
+
+	a {
+		color: $white;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+	.social-media-icons img {
+		margin-right: 2rem;
+	}
+}
