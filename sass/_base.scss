@@ -1,0 +1,64 @@
+// Variables
+$font-stack: "Inter", sans-serif;
+$font-base-size: 16px;
+
+//  ----- Button properties & settings -----
+$btn-padding-y: 0.7rem;
+$btn-padding-x: 1.5rem;
+$btn-radius: 6px;
+$btn-font-size: 1rem;
+
+$btn-padding-y-sm: 0.8rem;
+$btn-padding-x-sm: 1rem;
+$btn-font-size-sm: 0.75rem;
+
+/* --------------------------
+  *  Varibles for max-screen breakpoint 
+/* --------------------------*/
+$breakpoints-down: (
+	small: 499px,
+	medium: 768px,
+	large: 1024px,
+	x-large: 1399px,
+);
+
+/* --------------------------
+  *  Varibles for min-screen breakpoint
+/* --------------------------*/
+$breakpoints-up: (
+	small: 500px,
+	medium: 768.5px,
+	large: 1024.5px,
+	x-large: 1300px,
+);
+
+/* --------------------------
+  *  MIXINGS
+/* --------------------------*/
+// * Breakpoint-up (min-size)
+@mixin breakpoint-up($size) {
+	$breakpoint-value: map-get($breakpoints-up, $size);
+
+	@media screen and (min-width: $breakpoint-value) {
+		@content;
+	}
+}
+
+// * Breakpoint-down (max-size)
+@mixin breakpoint-down($size) {
+	$breakpoint-value: map-get($breakpoints-up, $size);
+
+	@media screen and (max-width: $breakpoint-value) {
+		@content;
+	}
+}
+
+// * Create a range-specific mixin
+@mixin breakpoint-range($minSize, $maxSize) {
+	$breakpoints-up-value: map-get($breakpoints-up, $minSize);
+	$breakpoints-down-value: map-get($breakpoints-down, $maxSize);
+
+	@media screen and (min-width: $breakpoints-up-value) and (max-width: $breakpoints-down-value) {
+		@content;
+	}
+}

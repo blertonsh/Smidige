@@ -1,0 +1,45 @@
+/* --------------------------
+  *  Varibles for max-screen breakpoint 
+/* --------------------------*/
+/* --------------------------
+  *  Varibles for min-screen breakpoint
+/* --------------------------*/
+/* --------------------------
+  *  MIXINGS
+/* --------------------------*/
+/* --------------------------
+  * :::: Button style properties ::::
+/* --------------------------*/
+.button {
+  padding: 0.7rem 1.5rem;
+  border: 0;
+  border-radius: 6px;
+  opacity: 1;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.button:hover {
+  color: #fff;
+  opacity: 0.95;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+.button:focus, .button.focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/*# sourceMappingURL=main.css.map */

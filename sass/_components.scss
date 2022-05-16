@@ -1,0 +1,27 @@
+/* --------------------------
+  * :::: Button style properties ::::
+/* --------------------------*/
+
+.button {
+	padding: $btn-padding-y $btn-padding-x;
+	border: 0;
+	border-radius: $btn-radius;
+	opacity: 1;
+	font-size: 0.85rem;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+
+	&:hover {
+		color: #fff;
+		opacity: 0.95;
+		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	}
+}
