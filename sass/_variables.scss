@@ -2,6 +2,7 @@
 $font-stack: "Inter", "Open Sans", "Segoe UI", BlinkMacSystemFont, "Roboto", sans-serif;
 $font-stack-secondary: "Roc Grotesk", sans-serif;
 $font-base-size: 16px;
+$font-base-size-sm: 14px;
 
 //  ----- Color variables -----
 $primary-color: #234c87;
@@ -14,15 +15,26 @@ $gray-500: rgb(55, 54, 54);
 $gray-900: rgb(55, 54, 54);
 $black: #111;
 
-//  ----- Button properties & settings -----
-$btn-padding-y: 1.1rem;
-$btn-padding-x: 2.5rem;
+//  ----- Button properties & variables -----
+$btn-padding-y: 1.2rem;
+$btn-padding-x: 2rem;
 $btn-radius: 0px;
 $btn-font-size: 1rem;
 
 $btn-padding-y-sm: 0.8rem;
 $btn-padding-x-sm: 1rem;
 $btn-font-size-sm: 0.75rem;
+
+//  ----- Input properties & variables  -----
+$input-padding-y: 1rem !default;
+$input-padding-x: 1.5rem !default;
+$input-border: #d4d4d4;
+$input-border-radius: 0 !default;
+$input-font-size: 1rem !default;
+$input-txt-color: $gray-500 !default;
+
+$input-padding-y-sm: 0.6rem;
+$input-padding-x-sm: 1rem;
 
 /* --------------------------
   *  Varibles for max-screen breakpoint 

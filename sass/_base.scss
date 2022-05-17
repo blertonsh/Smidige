@@ -29,6 +29,28 @@
 	}
 }
 
+@mixin input-placeholder {
+	&.placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 	height: -webkit-fill-available;
@@ -39,37 +61,56 @@ body {
 	font-size: $font-base-size;
 	line-height: 1.7;
 	background: #fcfcfc;
-}
-// -- Utilitie classes --
 
-// Text colors
+	@include breakpoint-down("medium") {
+		p {
+			font-size: $font-base-size-sm;
+			line-height: 1.5;
+		}
+	}
+}
+/* ----- Utilitie classes ----- */
+
+/* Text colors */
 .text-primary {
-	color: $primary-color;
+	color: $primary-color !important;
 }
 .text-secondary {
-	color: $secondary-color;
+	color: $secondary-color !important;
 }
 .text-gray {
-	color: $gray;
+	color: $gray !important;
 }
 .text-white {
-	color: $white;
+	color: $white !important;
 }
 
-// Bg colors
+/* Background colors */
 .bg-primary {
-	background: $primary-color;
+	background: $primary-color !important;
 }
 .bg-secondary {
-	background: $secondary-color;
+	background: $secondary-color !important;
 }
 .bg-gray {
-	background: $gray;
+	background: $gray !important;
 }
 .bg-white {
-	background: $white;
+	background: $white !important;
 }
-// Typography
+
+/* Text aligns */
+.text-left {
+	text-align: left !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-right {
+	text-align: right !important;
+}
+
+/* Typography utility */
 .title,
 .section-title,
 .subtitle {

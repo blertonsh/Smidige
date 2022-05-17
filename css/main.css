@@ -221,39 +221,62 @@ body {
   line-height: 1.7;
   background: #fcfcfc;
 }
+@media screen and (max-width: 768.5px) {
+  body p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
 
+/* ----- Utilitie classes ----- */
+/* Text colors */
 .text-primary {
-  color: #234c87;
+  color: #234c87 !important;
 }
 
 .text-secondary {
-  color: #ff5c72;
+  color: #ff5c72 !important;
 }
 
 .text-gray {
-  color: #cfcfcf;
+  color: #cfcfcf !important;
 }
 
 .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 
+/* Background colors */
 .bg-primary {
-  background: #234c87;
+  background: #234c87 !important;
 }
 
 .bg-secondary {
-  background: #ff5c72;
+  background: #ff5c72 !important;
 }
 
 .bg-gray {
-  background: #cfcfcf;
+  background: #cfcfcf !important;
 }
 
 .bg-white {
-  background: #fff;
+  background: #fff !important;
 }
 
+/* Text aligns */
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/* Typography utility */
 .title,
 .section-title,
 .subtitle {
@@ -272,18 +295,19 @@ body {
  ---- Buttons----
  */
 .button {
-  padding: 1.1rem 2.5rem;
+  padding: 1.2rem 2rem;
   border: 0;
   border-radius: 0px;
   opacity: 1;
   font-family: "Roc Grotesk", sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
+  letter-spacing: 1px;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .button:hover {
   opacity: 0.95;
@@ -294,9 +318,78 @@ body {
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
+.button-primary {
+  background-color: #234c87;
+  border: 2px solid #234c87;
+  color: #fff;
+}
+.button-primary:hover {
+  background: transparent;
+  color: #234c87;
+}
+.button-secondary {
+  background-color: #ff5c72;
+  border: 2px solid #ff5c72;
+  color: #234c87;
+}
+.button-secondary:hover {
+  background: transparent;
+  color: #ff5c72;
+}
 .button-tertiary {
   background-color: #fff;
+  border: 2px solid #fff;
   color: #234c87;
+}
+.button-tertiary:hover {
+  background: transparent;
+  color: #fff;
+}
+
+/*
+ ---- Inputs ----
+ */
+.input-default {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  outline-color: #ff5c72;
+  outline: none;
+  background: transparent;
+  background-clip: padding-box;
+  border: 1px solid #d4d4d4;
+  color: #373636;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  border-radius: 0;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.input-default:focus {
+  border-color: #ff5c72;
+  outline: 0 none;
+}
+.input-default.placeholder {
+  color: #cfcfcf;
+}
+.input-default:-moz-placeholder {
+  color: #cfcfcf;
+}
+.input-default::-moz-placeholder {
+  color: #cfcfcf;
+}
+.input-default:-ms-input-placeholder {
+  color: #cfcfcf;
+}
+.input-default::-webkit-input-placeholder {
+  color: #cfcfcf;
+}
+
+textarea {
+  resize: none;
 }
 
 /* --------------------------
@@ -373,45 +466,59 @@ footer a:hover {
 footer .social-media-icons img {
   margin-right: 2rem;
 }
+@media screen and (max-width: 768.5px) {
+  footer {
+    text-align: center;
+  }
+}
 
-.hero-backgorund-home {
-  background-image: url("../images/home-header.png");
+.hero-background {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
+}
+
+.hero-home {
+  background-image: url("../images/home-hero-img.png");
   min-height: 85vh;
+}
+
+.hero-contact {
+  background-image: url("../images/contact-hero-img.png");
+  min-height: 50vh;
 }
 
 .hero-text {
   margin-top: 10%;
+  /* Set the font smaller and align intems center in devices from tablet to small phones*/
 }
 .hero-text .title {
   font-family: "Roc Grotesk", sans-serif;
-  font-size: 64px;
+  font-size: 72px;
   font-weight: 600;
-  line-height: 92px;
+  text-transform: capitalize;
+  line-height: 1.2;
   color: #fff;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 768.5px) {
+  .hero-text {
+    text-align: center;
+  }
+  .hero-text .title {
+    font-size: 60px;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
 }
 
 /*
     ----- Sections ----- 
     */
 .section {
-  padding: 50px 0;
-  	/*
-      ----- Section 1 - Services ----- 
-      */
-  	/*
-      ----- Section 4 - About us ----- 
-      */
-  	/*
-      ----- Section 5 - Features ----- 
-      */
-  	/*
-      ----- Section 5 - Contact ----- 
-      */
+  padding: 3rem 0;
+  /* ----- Section 2  - Clients -----  */
 }
 .section p {
   font-weight: 300;
@@ -421,14 +528,42 @@ footer .social-media-icons img {
   text-transform: uppercase;
   font-family: "Roc Grotesk", sans-serif;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: #234c87;
 }
+.section a.read-more img {
+  /* Give space left to the 'arrow' icon*/
+  margin-left: 2rem;
+}
 .section-title {
+  margin-bottom: 2rem;
   font-family: "Roc Grotesk", sans-serif;
-  font-size: 48px;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 600;
   color: #234c87;
+}
+@media screen and (max-width: 768.5px) {
+  .section {
+    		/* Set the padding lower
+        - font smaller and 
+        - align intems center in devices from tablet to small phones */
+    padding: 2rem 0rem;
+  }
+  .section-title {
+    /* Set the title smaller and break to new lines  */
+    font-size: 2.5rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+  .section p {
+    font-size: 14px;
+  }
+}
+.section-services {
+  /* ----- Section 1 - Services -----  */
+  padding: 0 auto;
+  /* Breakpoint for devices 'Tablet' - 'Phones'*/
 }
 .section-services .tab-content {
   padding: 4rem 5rem;
@@ -439,12 +574,39 @@ footer .social-media-icons img {
   background: #fff;
   color: #234c87;
 }
-.section-about img {
+@media screen and (max-width: 768.5px) {
+  .section-services .tab-content {
+    padding: 1.5rem 1rem;
+  }
+}
+.section-clients {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Set specific widh and height to client logos*/
+  /* Breakpoint for devices 'Tablet' - 'Phones'*/
+}
+.section-clients-logo {
+  max-width: 200px;
+  height: 32px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.section-clients-logo:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.section-about {
+  /* ----- Section 3 - About us -----  */
+  padding: 0 auto;
+}
+.section-about .section-image {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .section-features {
+  /*  ----- Section 4 - Features -----    */
   background: #234c87;
   color: #fff;
   text-align: left;
@@ -458,11 +620,83 @@ footer .social-media-icons img {
   margin: 0;
   font-size: 1.2rem;
 }
-.section .addresses {
+@media screen and (max-width: 768.5px) {
+  .section-features .row > div {
+    /*  Give gap to div to not collapse together*/
+    margin-bottom: 0.5rem;
+  }
+  .section-features .section-title {
+    font-size: 2rem;
+  }
+  .section-features p {
+    font-size: 11px;
+  }
+}
+.section-case-studies {
+  /* ----- Section 5 - Case studies -----  */
+  		/* Set position absolute to display the text on 
+        - top  and right for items that are even
+        - top and left for items that are odd(every 2nd item)
+        */
+}
+.section-case-studies .case-item {
+  position: relative;
+  color: #fff;
+  line-height: 0;
+}
+.section-case-studies .case-item-img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-case-studies .case-item-text {
+  position: absolute;
+  top: 2.5rem;
+  padding: 1rem;
+}
+.section-case-studies .case-item-text p {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+.section-case-studies .case-item-text a {
+  color: #fff;
+}
+.section-case-studies .case-item:nth-child(even) .case-item-text {
+  right: 2.5rem;
+}
+.section-case-studies .case-item:nth-child(odd) .case-item-text {
+  left: 2.5rem;
+}
+@media screen and (max-width: 768.5px) {
+  .section-case-studies {
+    			/* Set a fixed width for text container so it will position on sides
+          */
+  }
+  .section-case-studies .case-item-text {
+    max-width: 75% !important;
+  }
+  .section-case-studies .case-item:nth-child(even) .case-item-text {
+    right: 0em;
+  }
+  .section-case-studies .case-item:nth-child(odd) .case-item-text {
+    left: 0;
+  }
+}
+.section-contact {
+  /*  ----- Section 6 - Contact -----  */
+}
+.section-contact .addresses {
   line-height: 2em;
 }
-.section .addresses strong {
+.section-contact .addresses strong {
   font-weight: 500;
+}
+@media screen and (max-width: 768.5px) {
+  .section-contact form {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

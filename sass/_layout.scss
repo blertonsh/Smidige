@@ -63,4 +63,8 @@ footer {
 	.social-media-icons img {
 		margin-right: 2rem;
 	}
+
+	@include breakpoint-down("medium") {
+		text-align: center;
+	}
 }

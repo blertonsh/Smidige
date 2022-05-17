@@ -5,14 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"
 		/>
-		<meta name="description" content="" />
+		<meta
+			name="description"
+			content="Smidige is a truly global provider of software engineering and consulting
+		services. The geography of our projects extends across 40 countries and counting,
+		while our US and European offices house 3,000+ professionals working daily to
+		deliver business value through technology."
+		/>
 		<meta name="author" content="Smidige" />
 		<meta name="robots" content="index, follow" />
 		<link rel="icon" type="image/png" sizes="16x16" href="images/logo-sign.svg" />
 		<title>Smidige</title>
-
 		<!-- Google font link -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,13 +31,13 @@
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
-		<header class="header hero-backgorund-home">
+		<header class="header hero-background hero-home">
 			<div class="container">
 				<nav class="navbar">
 					<div class="row justify-content-between align-items-center">
 						<!-- Brand -->
 						<div class="navbar-brand col-xxl-7">
-							<img src="images/logo.svg" alt="Smidige" class="logo" />
+							<a href="index.html"><img src="images/logo.svg" alt="Smidige" class="logo" /></a>
 							<span class="tagline">A five word tagline here maybe?</span>
 						</div>
 						<!-- Menu list -->
@@ -44,33 +49,31 @@
 					</div>
 				</nav>
 				<!-- Hero Text -->
-				<div class="col-xxl-7 hero-text">
+				<div class="col-xxl-8 hero-text">
 					<h1 class="title">Small Enough to Scale, Big Enough to Care.</h1>
-					<a href="#" class="button button-tertiary">Get in Touch</a>
+					<a href="contact.html" class="button button-tertiary">Get in Touch</a>
 				</div>
 			</div>
 		</header>
 
 		<!--  -->
 		<main>
-			<section class="section section-services p-0">
-				<div class="row justify-content-between">
-					<div class="col-md-4 mx-auto pt-5">
-						<div class="container">
-							<h1 class="section-title mb-3">What We Offer</h1>
-							<div class="tab-links p-4">
-								<a href="#" class="subtitle text-gray d-block">IT Consulting</a>
+			<section class="section section-services py-0">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-md-4 mt-xl-3 pt-5">
+							<h1 class="section-title">What We Offer</h1>
+							<div class="tab-links p-2 p-xl-3">
+								<a href="#" class="subtitle text-secondary d-block">IT Consulting</a>
 								<a href="#" class="subtitle text-gray d-block">Software Engineering</a>
 								<a href="#" class="subtitle text-gray d-block">Managed IT Services</a>
 								<a href="#" class="subtitle text-gray d-block">DevOps</a>
 							</div>
 						</div>
-					</div>
-					<!-- Right side -->
-					<div class="col-md-7 tab-content bg-secondary">
-						<div class="col-xxl-10 mx-auto">
+						<!-- Right side -->
+						<div class="col-md-7 tab-content bg-secondary">
 							<div>
-								<h3 class="subtitle">IT Consulting</h3>
+								<h2 class="subtitle">IT Consulting</h2>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
 									egestas metus ac. Massa libero, hendrerit dui fermentum, enim. Aliquam,
@@ -79,24 +82,28 @@
 							</div>
 
 							<div class="row justify-content-between mt-5">
-								<div class="col-xl-5 mb-3 pe-xxl-0">
+								<div class="col-xl-6 mb-3">
 									<div class="card">
 										<h3 class="subtitle">IT Consulting</h3>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
 											egestas metus ac.
 										</p>
-										<a href="" class="read-more">Read more</a>
+										<a href="" class="read-more"
+											>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+										/></a>
 									</div>
 								</div>
-								<div class="col-xl-5 ps-xxl-0 mb-3">
+								<div class="col-xl-6 mb-3">
 									<div class="card">
 										<h3 class="subtitle">IT Consulting</h3>
 										<p>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
 											egestas metus ac.
 										</p>
-										<a href="" class="read-more">Read more</a>
+										<a href="" class="read-more"
+											>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+										/></a>
 									</div>
 								</div>
 							</div>
@@ -109,23 +116,35 @@
 			<section class="section section-clients bg-white">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
-						<h1 class="section-title col-xxl-3">Our Clients</h1>
-						<div class="col-xxl-8 d-flex justify-content-between">
-							<img src="images/clients/client-1.png" />
-							<img src="images/clients/client-2.png" />
-							<img src="images/clients/client-3.png" />
+						<h1 class="section-title col-xxl-3 pt-3">Our Clients</h1>
+						<div class="col-xxl-8 d-flex flex-wrap justify-content-between align-items-center">
+							<img
+								src="images/clients/client-1.png"
+								alt="Forbes partner of Smidige"
+								class="section-clients-logo"
+							/>
+							<img
+								src="images/clients/client-2.png"
+								alt="Forbes partner of Smidige"
+								class="section-clients-logo"
+							/>
+							<img
+								src="images/clients/client-3.png"
+								alt="Forbes partner of Smidige"
+								class="section-clients-logo"
+							/>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Section 4 - Who we are -->
+			<!-- Section 3 - Who we are -->
 			<section class="section section-about py-0">
 				<div class="container">
 					<div class="row justify-content-between">
-						<div class="col-md-5 py-5 my-3">
-							<h1 class="section-title mb-3">Who Are We</h1>
-							<div class="text mb-5">
+						<div class="col-md-4 py-xl-5 pe-xl-0">
+							<h1 class="section-title">Who Are We</h1>
+							<div class="text">
 								<p>
 									We believe that the future is digital. We also believe that without embracing new
 									technology, businesses postpone their growth.
@@ -137,41 +156,45 @@
 									deliver business value through technology.
 								</p>
 							</div>
-							<a href="" class="read-more">Read more</a>
+							<div class="my-4">
+								<a href="about.html" class="read-more col-3"
+									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+								/></a>
+							</div>
 						</div>
 						<!--  -->
-						<div class="col-md-6">
+						<div class="col-md-7 px-0">
 							<img src="images/about-us.png" alt="Smidige" class="section-image" />
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Section 5 - Features -->
+			<!-- Section 4 - Features -->
 			<section class="section section-features">
 				<div class="container">
 					<div class="row align-items-center gap-2">
-						<div class="col-6 col-md-4 col-xxl-2">
+						<div class="col-4 col-xxl-2">
 							<h1 class="section-title">1998</h1>
 							<p>founded</p>
 						</div>
-						<div class="col-6 col-md-4 col-xxl-2">
+						<div class="col-4 col-xxl-2">
 							<h1 class="section-title">3000+</h1>
 							<p>engineers</p>
 						</div>
-						<div class="col-6 col-md-4 col-xxl-2">
+						<div class="col-4 col-xxl-2">
 							<h1 class="section-title">800+</h1>
 							<p>clients served</p>
 						</div>
-						<div class="col-6 col-md-4 col-xxl-2">
+						<div class="col-4 col-xxl-2">
 							<h1 class="section-title">5+</h1>
 							<p>R&D labs</p>
 						</div>
-						<div class="col-6 col-md-4 col-xxl-2">
+						<div class="col-4 col-xxl-2">
 							<h1 class="section-title">50</h1>
 							<p>clients of 5+ years</p>
 						</div>
-						<div class="col-6 col-md-4 col-xxl-2">
+						<div class="col-4 col-xxl-2">
 							<h1 class="section-title">40</h1>
 							<p>countries on our global deliverymap</p>
 						</div>
@@ -183,39 +206,171 @@
 			<section class="section section-case-studies">
 				<div class="container">
 					<div class="row">
-						<h1 class="section-title">Case Studies</h1>
+						<h1 class="section-title mb-4 mb-xl-5">Case Studies</h1>
 
-						<!-- <article class="case-item col-md-6 mt-4">
-							<img src="images/case-studies/case-1.png" alt="" class="case-item-img" />
-							<div class="case-item-text col-6 ms-auto">
-								<h3 class="subtitle">IT Consulting</h3>
+						<article class="case-item col-md-6 g-0">
+							<img
+								src="images/case-studies/case-1.png"
+								alt="Forbes partner of Smidige"
+								class="case-item-img"
+							/>
+							<div class="case-item-text col-xl-6">
+								<h3 class="subtitle">Case Study 1</h3>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
-									egestas metus ac.
+									Smidige is a truly global provider of software engineering and consulting
+									services. The geography of our projects extends across 40 countries and counting,
+									while our US and European offices house 3,000+ professionals working daily to
+									deliver business value through technology.
 								</p>
-								<a href="" class="read-more">Read more</a>
+								<a href="" class="read-more"
+									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+								/></a>
 							</div>
-						</article> -->
+						</article>
+
+						<article class="case-item col-md-6 g-0">
+							<img
+								src="images/case-studies/case-2.png"
+								alt="Forbes partner of Smidige"
+								class="case-item-img"
+							/>
+							<div class="case-item-text col-xl-6">
+								<h3 class="subtitle">Case Study 2</h3>
+								<p>
+									Smidige is a truly global provider of software engineering and consulting
+									services. The geography of our projects extends across 40 countries and counting,
+									while our US and European offices house 3,000+ professionals working daily to
+									deliver business value through technology.
+								</p>
+								<a href="" class="read-more"
+									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+								/></a>
+							</div>
+						</article>
+
+						<article class="case-item col-md-6 g-0">
+							<img
+								src="images/case-studies/case-3.png"
+								alt="Forbes partner of Smidige"
+								class="case-item-img"
+							/>
+							<div class="case-item-text col-xl-6">
+								<h3 class="subtitle">Case Study 3</h3>
+								<p>
+									Smidige is a truly global provider of software enigeering and consulting servies.
+									The geography of our projects extends across 40 countries and counting, while our
+									US European offices house 3,000+ professionals working daily to deliver business
+									value through technology.
+								</p>
+								<a href="" class="read-more"
+									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+								/></a>
+							</div>
+						</article>
+
+						<article class="case-item col-md-6 g-0">
+							<img
+								src="images/case-studies/case-4.png"
+								alt="Forbes partner of Smidige"
+								class="case-item-img"
+							/>
+							<div class="case-item-text col-xl-6">
+								<h3 class="subtitle">Case Study 4</h3>
+								<p>
+									Smidige is a truly global provider of software enigeering and consulting servies.
+									The geography of our projects extends across 40 countries and counting, while our
+									US European offices house 3,000+ professionals working daily to deliver business
+									value through technology.
+								</p>
+								<a href="" class="read-more"
+									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
+								/></a>
+							</div>
+						</article>
 					</div>
 				</div>
 			</section>
 
-			<!-- Section 6 - Contact us -->
-			<section class="section section-contact">
+			<!-- Section 6- Contact us -->
+			<section class="section section-contact pt-2">
 				<div class="container">
-					<div class="row">
+					<div class="row justify-content-between">
 						<h1 class="section-title">Get in Touch</h1>
-						<div class="col-md-3">
-							<div class="addresses mt-5">
-								<h3>Norway</h3>
+						<!-- Contact Details -->
+						<div class="col-md-5 col-xl-3 mt-xl-5 d-flex d-md-block">
+							<div class="addresses col-6 col-md-12">
+								<h2>Norway</h2>
 								<strong>123 345 6789</strong>
 								<p class="mt-0">Sales inquiries</p>
 							</div>
-							<div class="addresses mt-5">
-								<h3>United States</h3>
+							<div class="addresses col-6 col-md-12 mt-xl-5">
+								<h2>United States</h2>
 								<strong>123 345 6789</strong>
 								<p class="mt-0">Sales inquiries</p>
 							</div>
+						</div>
+						<!-- Contact Form -->
+						<div class="col-md-7 col-xl-9 mt-3 mt-xl-5">
+							<form action="" method="POST" class="row form-group">
+								<div class="col-md-6">
+									<input
+										type="text"
+										name="fullName"
+										class="input-default"
+										id="fullName"
+										placeholder="Full name *"
+										required
+									/>
+								</div>
+								<div class="col-md-6">
+									<input
+										type="email"
+										name="email"
+										class="input-default"
+										id="email"
+										placeholder="E-mail address *"
+										required
+									/>
+								</div>
+								<div class="col-md-6">
+									<input
+										type="tel"
+										name="phone"
+										class="input-default"
+										id="phone"
+										placeholder="Phone number"
+										required
+									/>
+								</div>
+								<div class="col-md-6">
+									<input
+										type="text"
+										name="company"
+										class="input-default"
+										id="company"
+										placeholder="Company"
+									/>
+								</div>
+								<div class="col-md-12">
+									<textarea
+										name="subject"
+										id="subject"
+										class="input-default"
+										rows="8"
+										placeholder="Describe your idea..."
+									></textarea>
+								</div>
+								<p class="col-md-12 mb-4">
+									Please be informed that when you click the Send button Smidige will process your
+									personal data in accordance with our Privacy notice for the purpose of providing
+									you with appropriate information.
+								</p>
+								<div class="button-container">
+									<button type="submit" name="submit" class="button button-primary col-6 col-xl-3">
+										Send
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -225,12 +380,11 @@
 		<footer>
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-3">
+					<div class="col-md-3 mb-2 mb-md-0">
 						<img src="images/logo.svg" alt="Smidige" />
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-8 mt-4 mt-md-0">
 						<div class="row">
-							<div class="col-md-3">&copy; 2022 Smidige</div>
 							<div class="col-md-7 social-media-icons">
 								<a href="" target="_blank">
 									<img src="images/icons/facebook.svg" alt="Smidige - Facebook" />
@@ -245,9 +399,8 @@
 									<img src="images/icons/twitter.svg" alt="Smidige - Twitter" />
 								</a>
 							</div>
-							<div class="col-md-2">
-								<a href="#">Privacy policy</a>
-							</div>
+							<div class="col-md-2 mt-4 mt-md-0"><a href="privacy.html">Privacy policy</a></div>
+							<div class="col-md-3 mt-1 mt-md-0">&copy; 2022 Smidige</div>
 						</div>
 					</div>
 				</div>
