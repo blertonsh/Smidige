@@ -36,15 +36,31 @@
 				<nav class="navbar">
 					<div class="row justify-content-between align-items-center">
 						<!-- Brand -->
-						<div class="navbar-brand col-xxl-7">
+						<div class="navbar-brand col-xxl-6">
 							<a href="index.html"><img src="images/logo.svg" alt="Smidige" class="logo" /></a>
 							<span class="tagline">A five word tagline here maybe?</span>
 						</div>
-						<!-- Mennu list -->
-						<ul class="nav menu-list col-xxl-3">
+						<!-- Menu list -->
+						<ul class="nav menu-list col-xxl-4">
 							<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-							<li class="nav-item"><a href="" class="nav-link">Services</a></li>
-							<li class="nav-item"><a href="" class="nav-link">Company</a></li>
+							<li class="nav-item dropdown">
+								Services
+								<img src="images/icons/arrow-down.svg" class="dropdown-icon" />
+								<div class="dropdown-content">
+									<a href="" class="nav-link">IT Consulting</a>
+									<a href="" class="nav-link">DevOps</a>
+								</div>
+							</li>
+							<!--  -->
+							<li class="nav-item dropdown">
+								Compnay <img src="images/icons/arrow-down.svg" class="dropdown-icon" />
+								<div class="dropdown-content">
+									<a href="case-studies.html" class="nav-link">Case Studies</a>
+									<a href="about.html" class="nav-link">About Us</a>
+									<a href="careers.html" class="nav-link">Careers</a>
+									<a href="contact.html" class="nav-link">Contact</a>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</nav>
@@ -54,119 +70,119 @@
 				</div>
 			</div>
 		</header>
-	</body>
-	<main>
-		<section class="section section-contact">
+		<main>
+			<section class="section section-contact">
+				<div class="container">
+					<div class="row justify-content-between">
+						<h1 class="section-title">Get in Touch</h1>
+						<!-- Contact Details -->
+						<div class="col-md-5 col-xl-3 mt-xl-4 d-flex d-md-block">
+							<div class="addresses col-6 col-md-12">
+								<h2>Norway</h2>
+								<strong>123 345 6789</strong>
+								<p class="mt-0">Sales inquiries</p>
+							</div>
+							<div class="addresses col-6 col-md-12 mt-xl-5">
+								<h2>United States</h2>
+								<strong>123 345 6789</strong>
+								<p class="mt-0">Sales inquiries</p>
+							</div>
+						</div>
+						<!-- Contact Form -->
+						<div class="col-md-7 col-xl-9 mt-3 mt-xl-4">
+							<form action="" method="POST" class="row form-group">
+								<div class="col-md-6">
+									<input
+										type="text"
+										name="fullName"
+										class="input-default"
+										id="fullName"
+										placeholder="Full name *"
+										required
+									/>
+								</div>
+								<div class="col-md-6">
+									<input
+										type="email"
+										name="email"
+										class="input-default"
+										id="email"
+										placeholder="E-mail address *"
+									/>
+								</div>
+								<div class="col-md-6">
+									<input
+										type="tel"
+										name="phone"
+										class="input-default"
+										id="phone"
+										placeholder="Phone number"
+										required
+									/>
+								</div>
+								<div class="col-md-6">
+									<input
+										type="text"
+										name="company"
+										class="input-default"
+										id="company"
+										placeholder="Company name"
+									/>
+								</div>
+								<div class="col-md-12">
+									<textarea
+										name="subject"
+										id="subject"
+										class="input-default"
+										cols="30"
+										rows="8"
+										placeholder="Describe your idea..."
+									></textarea>
+								</div>
+								<p class="col-md-12 mb-4">
+									Please be informed that when you click the Send button Smidige will process your
+									personal data in accordance with our Privacy notice for the purpose of providing
+									you with appropriate information.
+								</p>
+								<div class="button-container">
+									<button type="submit" name="submit" class="button button-primary col-6 col-xl-3">
+										Send
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
 			<div class="container">
 				<div class="row justify-content-between">
-					<h1 class="section-title">Get in Touch</h1>
-					<!-- Contact Details -->
-					<div class="col-md-5 col-xl-3 mt-xl-5 d-flex d-md-block">
-						<div class="addresses col-6 col-md-12">
-							<h2>Norway</h2>
-							<strong>123 345 6789</strong>
-							<p class="mt-0">Sales inquiries</p>
-						</div>
-						<div class="addresses col-6 col-md-12 mt-xl-5">
-							<h2>United States</h2>
-							<strong>123 345 6789</strong>
-							<p class="mt-0">Sales inquiries</p>
-						</div>
+					<div class="col-md-3 mb-2 mb-md-0">
+						<img src="images/logo.svg" alt="Smidige" />
 					</div>
-					<!-- Contact Form -->
-					<div class="col-md-7 col-xl-9 mt-3 mt-xl-5">
-						<form action="" method="POST" class="row form-group">
-							<div class="col-md-6">
-								<input
-									type="text"
-									name="fullName"
-									class="input-default"
-									id="fullName"
-									placeholder="Full name *"
-									required
-								/>
+					<div class="col-md-8 mt-4 mt-md-0">
+						<div class="row">
+							<div class="col-md-7 social-media-icons">
+								<a href="" target="_blank">
+									<img src="images/icons/facebook.svg" alt="Smidige - Facebook" />
+								</a>
+								<a href="" target="_blank">
+									<img src="images/icons/instagram.svg" alt="Smidige - Instagram" />
+								</a>
+								<a href="" target="_blank">
+									<img src="images/icons/linkedin.svg" alt="Smidige - Linkedin" />
+								</a>
+								<a href="" target="_blank">
+									<img src="images/icons/twitter.svg" alt="Smidige - Twitter" />
+								</a>
 							</div>
-							<div class="col-md-6">
-								<input
-									type="email"
-									name="email"
-									class="input-default"
-									id="email"
-									placeholder="E-mail address *"
-								/>
-							</div>
-							<div class="col-md-6">
-								<input
-									type="tel"
-									name="phone"
-									class="input-default"
-									id="phone"
-									placeholder="Phone number"
-									required
-								/>
-							</div>
-							<div class="col-md-6">
-								<input
-									type="text"
-									name="company"
-									class="input-default"
-									id="company"
-									placeholder="Company"
-								/>
-							</div>
-							<div class="col-md-12">
-								<textarea
-									name="subject"
-									id="subject"
-									class="input-default"
-									cols="30"
-									rows="8"
-									placeholder="Describe your idea..."
-								></textarea>
-							</div>
-							<p class="col-md-12 mb-4">
-								Please be informed that when you click the Send button Smidige will process your
-								personal data in accordance with our Privacy notice for the purpose of providing you
-								with appropriate information.
-							</p>
-							<div class="button-container">
-								<button type="submit" name="submit" class="button button-primary col-6 col-xl-3">
-									Send
-								</button>
-							</div>
-						</form>
+							<div class="col-md-2 mt-4 mt-md-0"><a href="privacy.html">Privacy policy</a></div>
+							<div class="col-md-3 mt-1 mt-md-0">&copy; 2022 Smidige</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-	</main>
-	<footer>
-		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-md-3 mb-2 mb-md-0">
-					<img src="images/logo.svg" alt="Smidige" />
-				</div>
-				<div class="col-md-8 mt-4 mt-md-0">
-					<div class="row">
-						<div class="col-md-7 social-media-icons">
-							<a href="" target="_blank">
-								<img src="images/icons/facebook.svg" alt="Smidige - Facebook" />
-							</a>
-							<a href="" target="_blank">
-								<img src="images/icons/instagram.svg" alt="Smidige - Instagram" />
-							</a>
-							<a href="" target="_blank">
-								<img src="images/icons/linkedin.svg" alt="Smidige - Linkedin" />
-							</a>
-							<a href="" target="_blank">
-								<img src="images/icons/twitter.svg" alt="Smidige - Twitter" />
-							</a>
-						</div>
-						<div class="col-md-2 mt-4 mt-md-0"><a href="privacy.html">Privacy policy</a></div>
-						<div class="col-md-3 mt-1 mt-md-0">&copy; 2022 Smidige</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+		</footer>
+	</body>
 </html>

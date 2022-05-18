@@ -19,12 +19,17 @@
 	min-height: 50vh;
 }
 
+.hero-about {
+	background-image: url("../images/about-hero-img.png");
+	min-height: 50vh;
+}
+
 .hero-text {
 	margin-top: 10%;
 	.title {
 		// Change font-family of hero-title and weight bold
 		font-family: $font-stack-secondary;
-		font-size: 72px;
+		font-size: 68px;
 		font-weight: 600;
 		text-transform: capitalize;
 		line-height: 1.2;
@@ -49,6 +54,15 @@
 .section {
 	padding: 3rem 0;
 
+	&-title {
+		margin-bottom: 2rem;
+		font-family: $font-stack-secondary;
+		font-size: 3rem;
+		font-weight: 700;
+		color: $primary-color;
+		line-height: 1.5;
+	}
+
 	p {
 		// font-size: 14px;
 		font-weight: 300;
@@ -70,23 +84,14 @@
 		}
 	}
 
-	&-title {
-		margin-bottom: 2rem;
-		// font properties
-		font-family: $font-stack-secondary;
-		font-size: 3rem;
-		font-weight: 600;
-		color: $primary-color;
-	}
-
 	@include breakpoint-down("medium") {
 		/* Set the padding lower
     - font smaller and 
     - align intems center in devices from tablet to small phones */
-		padding: 2rem 0rem;
+		padding: 2.5rem 0rem;
 
+		/* Set the title smaller and break to new lines  */
 		&-title {
-			/* Set the title smaller and break to new lines  */
 			font-size: 2.5rem;
 			line-height: 1.2;
 			word-wrap: break-word;
@@ -124,8 +129,8 @@
 	&-clients {
 		align-items: center;
 
-		/* Set specific widh and height to client logos*/
 		&-logo {
+			/* Set specific widh and height to client logos*/
 			max-width: 200px;
 			height: 32px;
 			margin-top: 0.5rem;
@@ -135,7 +140,6 @@
 				margin-right: 0.5rem;
 			}
 		}
-		/* Breakpoint for devices 'Tablet' - 'Phones'*/
 	}
 
 	&-about {
@@ -158,24 +162,26 @@
 		.section-title {
 			color: $white;
 			margin-bottom: 0;
-			line-height: 1.2;
+			line-height: 1;
 		}
 
 		p {
 			margin: 0;
 			font-size: 1.2rem;
+			font-weight: 300;
 		}
 
 		@include breakpoint-down("medium") {
 			.row > div {
 				/*  Give gap to div to not collapse together*/
-				margin-bottom: 0.5rem;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
 			}
 			.section-title {
 				font-size: 2rem;
 			}
 			p {
-				font-size: 11px;
+				font-size: 11.5px;
 			}
 		}
 	}
@@ -244,6 +250,11 @@
 		/*  ----- Section 6 - Contact -----  */
 		.addresses {
 			line-height: 2em;
+
+			h2 {
+				font-family: $font-stack-secondary;
+			}
+
 			strong {
 				font-weight: 500;
 			}
@@ -253,6 +264,94 @@
 			form {
 				text-align: center;
 			}
+		}
+	}
+}
+
+/*
+    ----- PAGE: ABOUT US / CSS STYLE ----- 
+    */
+
+.about-page {
+	// General css
+	.section-image {
+		height: 500px;
+		object-fit: cover;
+	}
+
+	.subtitle {
+		font-size: 1.7rem;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		margin-top: 0rem;
+	}
+
+	.section-characteristics {
+		/* ----- Section - Characterisitcs -----*/
+		.card {
+			/*Display items flex and align to center*/
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: 350px;
+			padding: 3rem 5rem;
+
+			/* Breakpoint for devices 'Tablet' - 'Phones'*/
+			@include breakpoint-down("medium") {
+				padding: 1rem;
+				min-height: 250px;
+			}
+
+			/*Set gray bg to every 3th item*/
+			&:nth-child(3n - 1) {
+				background: #fcfcfc;
+			}
+
+			.subtitle {
+				text-transform: uppercase;
+				color: $primary-color;
+				margin-bottom: 2rem;
+
+				/*Create a rectangle shape before subtitles with gradient color*/
+				&::before {
+					content: " ";
+					margin-right: 1.5rem;
+					padding: 4px 28px;
+					background-color: $primary-color;
+					background: linear-gradient(295deg, #234c87 0%, #ff5c72 55%, #ffffff 100%);
+					z-index: 999;
+				}
+			}
+		}
+	}
+
+	.section-testimonials {
+		/* ----- Section - Testimonials -----*/
+		.testimonial-card {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+
+			&::before {
+				content: " ";
+				padding: 4px 16px;
+				margin-top: 8px;
+				background-image: url("../images/icons/quote.svg");
+				background-repeat: no-repeat;
+				z-index: 999;
+			}
+		}
+	}
+
+	//
+	@include breakpoint-down("medium") {
+		.section-image {
+			height: auto;
+		}
+		.section-title {
+			text-align: center;
 		}
 	}
 }
