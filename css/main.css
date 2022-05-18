@@ -297,7 +297,7 @@ body {
 }
 
 /* Typography utility */
-.title,
+.hero-title,
 .section-title,
 .subtitle {
   font-family: "Roc Grotesk", sans-serif;
@@ -541,6 +541,16 @@ footer .social-media-icons img {
   background-image: url("../images/home-hero-img.png");
   min-height: 85vh;
 }
+@media screen and (min-width: 768.5px) and (max-width: 1024px) {
+  .hero-home {
+    min-height: 50vh !important;
+  }
+}
+@media screen and (max-width: 768.5px) {
+  .hero-home {
+    min-height: 100vh !important;
+  }
+}
 
 .hero-contact {
   background-image: url("../images/contact-hero-img.png");
@@ -552,11 +562,17 @@ footer .social-media-icons img {
   min-height: 50vh;
 }
 
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .hero-contact,
+  .hero-about {
+    min-height: 35vh !important;
+  }
+}
 .hero-text {
   margin-top: 10%;
   /* Set the font smaller and align intems center in devices from tablet to small phones*/
 }
-.hero-text .title {
+.hero-text .hero-title {
   font-family: "Roc Grotesk", sans-serif;
   font-size: 68px;
   font-weight: 600;
@@ -565,13 +581,18 @@ footer .social-media-icons img {
   color: #fff;
   margin-bottom: 3rem;
 }
+@media screen and (min-width: 768.5px) and (max-width: 1024px) {
+  .hero-text .hero-title {
+    font-size: 56px;
+  }
+}
 @media screen and (max-width: 768.5px) {
   .hero-text {
     text-align: center;
   }
-  .hero-text .title {
-    font-size: 60px;
-    line-height: 1.2;
+  .hero-text .hero-title {
+    font-size: 56px;
+    line-height: 1.4;
     word-wrap: break-word;
   }
 }
@@ -580,7 +601,7 @@ footer .social-media-icons img {
     ----- Sections ----- 
     */
 .section {
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   /* ----- Section 2  - Clients -----  */
 }
 .section-title {
@@ -607,7 +628,7 @@ footer .social-media-icons img {
   /* Give space left to the 'arrow' icon*/
   margin-left: 2rem;
 }
-@media screen and (max-width: 768.5px) {
+@media screen and (max-width: 1024.5px) {
   .section {
     		/* Set the padding lower
         - font smaller and 
@@ -616,8 +637,7 @@ footer .social-media-icons img {
     /* Set the title smaller and break to new lines  */
   }
   .section-title {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 2rem;
     word-wrap: break-word;
   }
   .section p {
@@ -627,7 +647,16 @@ footer .social-media-icons img {
 .section-services {
   /* ----- Section 1 - Services -----  */
   padding: 0 auto;
+  /* Breakpoint for devices 'Ipad PRO'*/
   /* Breakpoint for devices 'Tablet' - 'Phones'*/
+}
+.section-services .tab-links .subtitle {
+  display: block;
+}
+@media screen and (max-width: 768.5px) {
+  .section-services .tab-links .subtitle {
+    font-size: 1.5rem;
+  }
 }
 .section-services .tab-content {
   padding: 4rem 5rem;
@@ -638,15 +667,18 @@ footer .social-media-icons img {
   background: #fff;
   color: #234c87;
 }
+@media screen and (max-width: 1024.5px) {
+  .section-services .tab-content {
+    padding: 2.5rem 2rem;
+  }
+}
 @media screen and (max-width: 768.5px) {
   .section-services .tab-content {
     padding: 1.5rem 1rem;
   }
 }
 .section-clients {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  overflow: hidden;
 }
 .section-clients-logo {
   /* Set specific widh and height to client logos*/
@@ -654,9 +686,19 @@ footer .social-media-icons img {
   height: 32px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  padding-right: 1.5rem;
+  vertical-align: middle;
 }
 .section-clients-logo:not(:last-child) {
   margin-right: 0.5rem;
+}
+@media screen and (max-width: 768.5px) {
+  .section-clients-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+  }
 }
 .section-about {
   /* ----- Section 3 - About us -----  */
@@ -684,17 +726,23 @@ footer .social-media-icons img {
   font-size: 1.2rem;
   font-weight: 300;
 }
-@media screen and (max-width: 768.5px) {
+@media screen and (max-width: 1024.5px) {
   .section-features .row > div {
     /*  Give gap to div to not collapse together*/
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768.5px) {
+  .section-features {
+    /*  Set the title font smaller and the paragraph*/
   }
   .section-features .section-title {
-    font-size: 2rem;
+    font-size: 28px;
   }
   .section-features p {
-    font-size: 11.5px;
+    font-size: 12px;
   }
 }
 .section-case-studies {
@@ -757,6 +805,7 @@ footer .social-media-icons img {
 }
 .section-contact .addresses h2 {
   font-family: "Roc Grotesk", sans-serif;
+  font-size: 1.2rem;
 }
 .section-contact .addresses strong {
   font-weight: 500;
@@ -803,10 +852,13 @@ footer .social-media-icons img {
   /* Breakpoint for devices 'Tablet' - 'Phones'*/
   /*Set gray bg to every 3th item*/
 }
-@media screen and (max-width: 768.5px) {
+@media screen and (max-width: 1024.5px) {
   .about-page .section-characteristics .card {
-    padding: 1rem;
+    padding: 1.5rem;
     min-height: 250px;
+  }
+  .about-page .section-characteristics .card .subtitle {
+    font-size: 1.5rem;
   }
 }
 .about-page .section-characteristics .card:nth-child(3n - 1) {
