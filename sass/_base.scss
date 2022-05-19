@@ -50,16 +50,12 @@
 	}
 }
 
-html {
-	scroll-behavior: smooth;
-	height: -webkit-fill-available;
-}
 body {
 	margin: 0;
 	font-family: $font-stack;
 	font-size: $font-base-size;
 	line-height: 1.5;
-	background: #fcfcfc;
+	background: #fff;
 
 	@include breakpoint-down("medium") {
 		p,
@@ -95,6 +91,9 @@ body {
 .bg-gray {
 	background: $gray !important;
 }
+.bg-lightgray {
+	background: $gray-100 !important;
+}
 .bg-white {
 	background: $white !important;
 }
@@ -118,6 +117,23 @@ body {
 }
 
 .subtitle {
-	font-size: 32px;
+	font-size: 2rem;
 	font-weight: 400;
+}
+
+// Clamp lines to not showing all text
+.line-clamp,
+.line-clamp-3,
+.line-clamp-4 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.line-clamp-3 {
+	-webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+	-webkit-line-clamp: 4;
 }

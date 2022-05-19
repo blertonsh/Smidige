@@ -36,6 +36,8 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 main {
@@ -228,17 +230,12 @@ template {
   display: none;
 }
 
-html {
-  scroll-behavior: smooth;
-  height: -webkit-fill-available;
-}
-
 body {
   margin: 0;
   font-family: "Inter", "Open Sans", "Segoe UI", BlinkMacSystemFont, "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: #fcfcfc;
+  background: #fff;
 }
 @media screen and (max-width: 768.5px) {
   body p,
@@ -279,6 +276,10 @@ body {
   background: #cfcfcf !important;
 }
 
+.bg-lightgray {
+  background: #fcfcfc !important;
+}
+
 .bg-white {
   background: #fff !important;
 }
@@ -304,8 +305,24 @@ body {
 }
 
 .subtitle {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
+}
+
+.line-clamp,
+.line-clamp-3,
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  -webkit-line-clamp: 4;
 }
 
 /* --------------------------
@@ -420,6 +437,9 @@ textarea {
  */
 .navbar {
   padding: 2rem 0;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, rgba(255, 92, 114, 0)), to(rgba(255, 92, 114, 0)));
+  background: linear-gradient(90deg, white 50%, rgba(255, 92, 114, 0) 50%, rgba(255, 92, 114, 0) 100%);
   	/*
           -Nav list
          */
@@ -440,12 +460,15 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 3rem;
 }
 .navbar-brand .logo {
-  max-width: 300px;
+  max-width: 240px;
+  vertical-align: middle;
 }
 .navbar-brand .tagline {
-  color: #fff;
+  color: #234c87;
+  font-size: 14px;
   font-weight: 300;
 }
 .navbar .nav {
@@ -510,7 +533,20 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   background: #ff5c72;
+  background: -webkit-gradient(linear, left top, right top, color-stop(33%, white), color-stop(33%, #ff5c72), to(#ff5c72));
+  background: linear-gradient(90deg, white 33%, #ff5c72 33%, #ff5c72 100%);
   color: #fff;
+}
+@media screen and (max-width: 768.5px) {
+  footer {
+    background: #ff5c72;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(33%, white), color-stop(33%, #ff5c72), to(#ff5c72));
+    background: linear-gradient(180deg, white 33%, #ff5c72 33%, #ff5c72 100%);
+    text-align: center;
+  }
+  footer .social-media-icons {
+    padding-top: 2rem;
+  }
 }
 footer img {
   vertical-align: middle;
@@ -522,11 +558,11 @@ footer a:hover {
   color: #234c87;
 }
 footer .social-media-icons img {
-  margin-right: 2rem;
+  margin-left: 2rem;
 }
-@media screen and (max-width: 768.5px) {
-  footer {
-    text-align: center;
+@media screen and (min-width: 768.5px) {
+  footer .copyright {
+    text-align: right;
   }
 }
 
@@ -540,6 +576,9 @@ footer .social-media-icons img {
 .hero-home {
   background-image: url("../images/home-hero-img.png");
   min-height: 85vh;
+}
+.hero-home .hero-text {
+  margin-top: 20%;
 }
 @media screen and (min-width: 768.5px) and (max-width: 1024px) {
   .hero-home {
@@ -569,7 +608,7 @@ footer .social-media-icons img {
   }
 }
 .hero-text {
-  margin-top: 10%;
+  margin-top: 13%;
   /* Set the font smaller and align intems center in devices from tablet to small phones*/
 }
 .hero-text .hero-title {
@@ -601,7 +640,7 @@ footer .social-media-icons img {
     ----- Sections ----- 
     */
 .section {
-  padding: 3.5rem 0;
+  padding: 4rem 0;
   /* ----- Section 2  - Clients -----  */
 }
 .section-title {
@@ -619,14 +658,25 @@ footer .social-media-icons img {
   margin-top: 1rem;
   text-transform: uppercase;
   font-family: "Roc Grotesk", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: #234c87;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.section a.read-more:hover {
+  color: #ff5c72;
+}
+.section a.read-more:hover img {
+  /*Scale the arrow right icon when it's hover*/
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .section a.read-more img {
   /* Give space left to the 'arrow' icon*/
-  margin-left: 2rem;
+  margin-left: 1.5rem;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
 }
 @media screen and (max-width: 1024.5px) {
   .section {
@@ -646,9 +696,15 @@ footer .social-media-icons img {
 }
 .section-services {
   /* ----- Section 1 - Services -----  */
-  padding: 0 auto;
   /* Breakpoint for devices 'Ipad PRO'*/
   /* Breakpoint for devices 'Tablet' - 'Phones'*/
+}
+@media screen and (min-width: 768.5px) {
+  .section-services {
+    background: #ff5c72;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fcfcfc), color-stop(50%, #ff5c72), to(#ff5c72));
+    background: linear-gradient(90deg, #fcfcfc 50%, #ff5c72 50%, #ff5c72 100%);
+  }
 }
 .section-services .tab-links .subtitle {
   display: block;
@@ -659,10 +715,24 @@ footer .social-media-icons img {
   }
 }
 .section-services .tab-content {
-  padding: 4rem 5rem;
+  padding: 1rem 0rem;
+  background-color: #ff5c72;
   color: #fff;
 }
+.section-services .tab-content .subtitle {
+  font-size: 28px;
+}
 .section-services .tab-content .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.5rem;
   background: #fff;
   color: #234c87;
@@ -709,6 +779,13 @@ footer .social-media-icons img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 1024.5px) {
+  .section-about .image-container {
+    position: absolute;
+    height: 555px;
+    right: 0;
+  }
 }
 .section-features {
   /*  ----- Section 4 - Features -----    */
@@ -796,6 +873,9 @@ footer .social-media-icons img {
   .section-case-studies .case-item:nth-child(odd) .case-item-text {
     left: 0;
   }
+}
+.section a.read-more:hover .case-item {
+  opacity: 0.7 !important;
 }
 .section-contact {
   /*  ----- Section 6 - Contact -----  */
