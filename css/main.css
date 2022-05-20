@@ -298,6 +298,12 @@ body {
 }
 
 /* Typography utility */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .hero-title,
 .section-title,
 .subtitle {
@@ -305,8 +311,13 @@ body {
 }
 
 .subtitle {
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024.5px) {
+  .subtitle {
+    font-size: 1.5rem;
+  }
 }
 
 .line-clamp,
@@ -601,6 +612,11 @@ footer .social-media-icons img {
   min-height: 50vh;
 }
 
+.hero-service {
+  background-image: url("../images/services-hero-img.png");
+  min-height: 50vh;
+}
+
 @media screen and (min-width: 500px) and (max-width: 1024px) {
   .hero-contact,
   .hero-about {
@@ -630,7 +646,7 @@ footer .social-media-icons img {
     text-align: center;
   }
   .hero-text .hero-title {
-    font-size: 56px;
+    font-size: 48px;
     line-height: 1.4;
     word-wrap: break-word;
   }
@@ -641,7 +657,22 @@ footer .social-media-icons img {
     */
 .section {
   padding: 4rem 0;
+  /* ----- Section 1 - Services -----  */
   /* ----- Section 2  - Clients -----  */
+  /* ----- Section 3 - About us -----  */
+  /*  ----- Section 4 - Features -----    */
+  /* ----- Section 5 - Case studies -----  */
+  /*  ----- Section 6 - Contact -----  */
+  	/*
+      ----- PAGE: ABOUT US / CSS STYLE ----- 
+      */
+  /*---- Section 3 - Charachteristics ----- */
+  /*---- Section 5 - Testimonials ----- */
+  	/*
+      ----- PAGE: SERVICE / CSS STYLE ----- 
+      */
+  /*---- Section 3 - Driven by results ----- */
+  /*---- Section 4 - Lets talk ----- */
 }
 .section-title {
   margin-bottom: 2rem;
@@ -694,11 +725,6 @@ footer .social-media-icons img {
     font-size: 14px;
   }
 }
-.section-services {
-  /* ----- Section 1 - Services -----  */
-  /* Breakpoint for devices 'Ipad PRO'*/
-  /* Breakpoint for devices 'Tablet' - 'Phones'*/
-}
 @media screen and (min-width: 768.5px) {
   .section-services {
     background: #ff5c72;
@@ -718,6 +744,18 @@ footer .social-media-icons img {
   padding: 1rem 0rem;
   background-color: #ff5c72;
   color: #fff;
+  /* Breakpoint for devices 'Ipad's*/
+  /* Breakpoint for devices 'Tablet' - 'Phones'*/
+}
+@media screen and (max-width: 1024.5px) {
+  .section-services .tab-content {
+    padding: 2.5rem 2rem;
+  }
+}
+@media screen and (max-width: 768.5px) {
+  .section-services .tab-content {
+    padding: 1.5rem 1rem;
+  }
 }
 .section-services .tab-content .subtitle {
   font-size: 28px;
@@ -736,16 +774,6 @@ footer .social-media-icons img {
   padding: 1.5rem;
   background: #fff;
   color: #234c87;
-}
-@media screen and (max-width: 1024.5px) {
-  .section-services .tab-content {
-    padding: 2.5rem 2rem;
-  }
-}
-@media screen and (max-width: 768.5px) {
-  .section-services .tab-content {
-    padding: 1.5rem 1rem;
-  }
 }
 .section-clients {
   overflow: hidden;
@@ -771,7 +799,6 @@ footer .social-media-icons img {
   }
 }
 .section-about {
-  /* ----- Section 3 - About us -----  */
   padding: 0 auto;
 }
 .section-about .section-image {
@@ -788,7 +815,6 @@ footer .social-media-icons img {
   }
 }
 .section-features {
-  /*  ----- Section 4 - Features -----    */
   background: #234c87;
   color: #fff;
   text-align: left;
@@ -804,8 +830,10 @@ footer .social-media-icons img {
   font-weight: 300;
 }
 @media screen and (max-width: 1024.5px) {
-  .section-features .row > div {
+  .section-features {
     /*  Give gap to div to not collapse together*/
+  }
+  .section-features .row > div {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     text-align: center;
@@ -823,7 +851,6 @@ footer .social-media-icons img {
   }
 }
 .section-case-studies {
-  /* ----- Section 5 - Case studies -----  */
   		/* Set position absolute to display the text on 
         - top  and right for items that are even
         - top and left for items that are odd(every 2nd item)
@@ -864,21 +891,15 @@ footer .social-media-icons img {
     			/* Set a fixed width for text container so it will position on sides
           */
   }
-  .section-case-studies .case-item-text {
-    max-width: 75% !important;
-  }
   .section-case-studies .case-item:nth-child(even) .case-item-text {
     right: 0em;
   }
   .section-case-studies .case-item:nth-child(odd) .case-item-text {
     left: 0;
   }
-}
-.section a.read-more:hover .case-item {
-  opacity: 0.7 !important;
-}
-.section-contact {
-  /*  ----- Section 6 - Contact -----  */
+  .section-case-studies .subtitle {
+    font-size: 26px;
+  }
 }
 .section-contact .addresses {
   line-height: 2em;
@@ -895,28 +916,72 @@ footer .social-media-icons img {
     text-align: center;
   }
 }
-
-/*
-    ----- PAGE: ABOUT US / CSS STYLE ----- 
-    */
-.about-page .section-image {
+.section-values {
+  /*----- Section 2 - Values -----*/
+}
+.section-values .section-image {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about-page .subtitle {
-  font-size: 1.7rem;
-  font-weight: 500;
+.section-characteristics .card {
+  /*Display items flex and align to center*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 100%;
+  padding: 3rem 4rem;
+  /* Breakpoint for devices 'Tablet' - 'Phones'*/
+  /*Set gray bg to every 3th item*/
+}
+@media screen and (max-width: 1024.5px) {
+  .section-characteristics .card {
+    padding: 1.5rem;
+    min-height: 250px;
+  }
+}
+.section-characteristics .card:nth-child(3n - 1) {
+  background: #fcfcfc;
+}
+.section-characteristics .card .subtitle {
+  color: #234c87;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*Create a rectangle shape before subtitles with gradient color*/
+}
+.section-characteristics .card .subtitle::before {
+  content: " ";
+  margin-right: 1.2rem;
+  padding: 1px 24px;
+  background-color: #ff5c72;
+  background: linear-gradient(295deg, #234c87 0%, #ff5c72 55%, #ffffff 100%);
+  z-index: 999;
+}
+.section-testimonials .testimonial-card {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.about-page p {
-  margin-top: 0rem;
+.section-testimonials .testimonial-card::before {
+  content: " ";
+  padding: 4px 16px;
+  margin-top: 8px;
+  background-image: url("../images/icons/quote.svg");
+  background-repeat: no-repeat;
+  z-index: 999;
 }
-.about-page .section-characteristics {
-  /* ----- Section - Characterisitcs -----*/
+.section-testimonials .testimonial-card p {
+  margin-top: 0;
 }
-.about-page .section-characteristics .card {
-  /*Display items flex and align to center*/
+.section-results .number-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,56 +992,61 @@ footer .social-media-icons img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 350px;
-  padding: 3rem 5rem;
-  /* Breakpoint for devices 'Tablet' - 'Phones'*/
-  /*Set gray bg to every 3th item*/
-}
-@media screen and (max-width: 1024.5px) {
-  .about-page .section-characteristics .card {
-    padding: 1.5rem;
-    min-height: 250px;
-  }
-  .about-page .section-characteristics .card .subtitle {
-    font-size: 1.5rem;
-  }
-}
-.about-page .section-characteristics .card:nth-child(3n - 1) {
-  background: #fcfcfc;
-}
-.about-page .section-characteristics .card .subtitle {
+  padding: 1rem;
+  text-align: center;
   text-transform: uppercase;
+  font-family: "Roc Grotesk", sans-serif;
+  line-height: 1rem;
   color: #234c87;
-  margin-bottom: 2rem;
-  /*Create a rectangle shape before subtitles with gradient color*/
+  width: 175px;
+  height: 175px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 1rem solid #ff5c72;
+  border-radius: 50%;
 }
-.about-page .section-characteristics .card .subtitle::before {
-  content: " ";
-  margin-right: 1.5rem;
-  padding: 4px 28px;
-  background-color: #234c87;
-  background: linear-gradient(295deg, #234c87 0%, #ff5c72 55%, #ffffff 100%);
-  z-index: 999;
+.section-results .number-container h2 {
+  font-size: 40px;
 }
-.about-page .section-testimonials {
-  /* ----- Section - Testimonials -----*/
+.section-results .number-container span {
+  font-weight: 700;
 }
-.about-page .section-testimonials .testimonial-card {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.section-results .card-body {
+  margin-top: 1.5rem;
 }
-.about-page .section-testimonials .testimonial-card::before {
-  content: " ";
-  padding: 4px 16px;
-  margin-top: 8px;
-  background-image: url("../images/icons/quote.svg");
-  background-repeat: no-repeat;
-  z-index: 999;
+.section-results .card-body h3 {
+  font-size: 1.5rem;
+  color: #234c87;
+}
+.section-letstalk {
+  background: #234c87;
+  background: -webkit-gradient(linear, left top, right top, color-stop(60%, #234c86), color-stop(40%, #ff5c72), color-stop(40%, #ff5c72));
+  background: linear-gradient(90deg, #234c86 60%, #ff5c72 40%, #ff5c72 40%);
 }
 @media screen and (max-width: 768.5px) {
-  .about-page .section-image {
+  .section-letstalk {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(57%, #234c86), color-stop(40%, #ff5c72), color-stop(40%, #ff5c72));
+    background: linear-gradient(180deg, #234c86 57%, #ff5c72 40%, #ff5c72 40%);
+  }
+}
+.section-letstalk a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section-letstalk a img {
+  width: 180px;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 768.5px) {
+  .section-values .section-image {
     height: auto;
   }
+
   .about-page .section-title {
     text-align: center;
   }

@@ -110,6 +110,12 @@ body {
 }
 
 /* Typography utility */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .hero-title,
 .section-title,
 .subtitle {
@@ -117,8 +123,12 @@ body {
 }
 
 .subtitle {
-	font-size: 2rem;
-	font-weight: 400;
+	font-size: 1.8rem;
+	font-weight: 500;
+
+	@include breakpoint-down("large") {
+		font-size: 1.5rem;
+	}
 }
 
 // Clamp lines to not showing all text

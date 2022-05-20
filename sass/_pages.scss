@@ -36,6 +36,11 @@
 	min-height: 50vh;
 }
 
+.hero-service {
+	background-image: url("../images/services-hero-img.png");
+	min-height: 50vh;
+}
+
 @include breakpoint-range("small", "large") {
 	.hero-contact,
 	.hero-about {
@@ -68,7 +73,7 @@
 		// Align items center, button and text
 		text-align: center;
 		.hero-title {
-			font-size: 56px;
+			font-size: 48px;
 			line-height: 1.4;
 			word-wrap: break-word;
 		}
@@ -137,9 +142,8 @@
 		}
 	}
 
+	/* ----- Section 1 - Services -----  */
 	&-services {
-		/* ----- Section 1 - Services -----  */
-
 		@include breakpoint-up("medium") {
 			background: $secondary-color;
 			background: linear-gradient(
@@ -165,6 +169,16 @@
 			background-color: $secondary-color;
 			color: $white;
 
+			/* Breakpoint for devices 'Ipad's*/
+			@include breakpoint-down("large") {
+				padding: 2.5rem 2rem;
+			}
+
+			/* Breakpoint for devices 'Tablet' - 'Phones'*/
+			@include breakpoint-down("medium") {
+				padding: 1.5rem 1rem;
+			}
+
 			.subtitle {
 				font-size: 28px;
 			}
@@ -176,20 +190,6 @@
 				padding: 1.5rem;
 				background: $white;
 				color: $primary-color;
-			}
-		}
-
-		/* Breakpoint for devices 'Ipad PRO'*/
-		@include breakpoint-down("large") {
-			.tab-content {
-				padding: 2.5rem 2rem;
-			}
-		}
-
-		/* Breakpoint for devices 'Tablet' - 'Phones'*/
-		@include breakpoint-down("medium") {
-			.tab-content {
-				padding: 1.5rem 1rem;
 			}
 		}
 	}
@@ -218,8 +218,8 @@
 		}
 	}
 
+	/* ----- Section 3 - About us -----  */
 	&-about {
-		/* ----- Section 3 - About us -----  */
 		padding: 0 auto;
 
 		.section-image {
@@ -237,8 +237,8 @@
 		}
 	}
 
+	/*  ----- Section 4 - Features -----    */
 	&-features {
-		/*  ----- Section 4 - Features -----    */
 		background: $primary-color;
 		color: $white;
 		text-align: left;
@@ -256,8 +256,8 @@
 		}
 
 		@include breakpoint-down("large") {
+			/*  Give gap to div to not collapse together*/
 			.row > div {
-				/*  Give gap to div to not collapse together*/
 				margin-top: 0.5em;
 				margin-bottom: 0.5em;
 				text-align: center;
@@ -269,14 +269,15 @@
 			.section-title {
 				font-size: 28px;
 			}
+
 			p {
 				font-size: 12px;
 			}
 		}
 	}
 
+	/* ----- Section 5 - Case studies -----  */
 	&-case-studies {
-		/* ----- Section 5 - Case studies -----  */
 		.case-item {
 			position: relative;
 			color: $white;
@@ -321,10 +322,6 @@
 		@include breakpoint-down("medium") {
 			/* Set a fixed width for text container so it will position on sides
       */
-			.case-item-text {
-				max-width: 75% !important;
-			}
-
 			.case-item:nth-child(even) .case-item-text {
 				right: 0em;
 			}
@@ -332,15 +329,15 @@
 			.case-item:nth-child(odd) .case-item-text {
 				left: 0;
 			}
+
+			.subtitle {
+				font-size: 26px;
+			}
 		}
 	}
 
-	a.read-more:hover .case-item {
-		opacity: 0.7 !important;
-	}
-
+	/*  ----- Section 6 - Contact -----  */
 	&-contact {
-		/*  ----- Section 6 - Contact -----  */
 		.addresses {
 			line-height: 2em;
 
@@ -360,47 +357,32 @@
 			}
 		}
 	}
-}
 
-/*
+	/*
     ----- PAGE: ABOUT US / CSS STYLE ----- 
     */
-
-.about-page {
-	// General css
-	.section-image {
-		height: 500px;
-		object-fit: cover;
+	&-values {
+		/*----- Section 2 - Values -----*/
+		.section-image {
+			height: 500px;
+			object-fit: cover;
+		}
 	}
 
-	.subtitle {
-		font-size: 1.7rem;
-		font-weight: 500;
-		margin-bottom: 1rem;
-	}
-
-	p {
-		margin-top: 0rem;
-	}
-
-	.section-characteristics {
-		/* ----- Section - Characterisitcs -----*/
+	/*---- Section 3 - Charachteristics ----- */
+	&-characteristics {
 		.card {
 			/*Display items flex and align to center*/
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			min-height: 350px;
-			padding: 3rem 5rem;
+			justify-content: flex-start;
+			min-height: 100%;
+			padding: 3rem 4rem;
 
 			/* Breakpoint for devices 'Tablet' - 'Phones'*/
 			@include breakpoint-down("large") {
 				padding: 1.5rem;
 				min-height: 250px;
-
-				.subtitle {
-					font-size: 1.5rem;
-				}
 			}
 
 			/*Set gray bg to every 3th item*/
@@ -409,16 +391,16 @@
 			}
 
 			.subtitle {
-				text-transform: uppercase;
 				color: $primary-color;
-				margin-bottom: 2rem;
+				text-transform: uppercase;
+				display: flex;
 
 				/*Create a rectangle shape before subtitles with gradient color*/
 				&::before {
 					content: " ";
-					margin-right: 1.5rem;
-					padding: 4px 28px;
-					background-color: $primary-color;
+					margin-right: 1.2rem;
+					padding: 1px 24px;
+					background-color: $secondary-color;
 					background: linear-gradient(295deg, #234c87 0%, #ff5c72 55%, #ffffff 100%);
 					z-index: 999;
 				}
@@ -426,8 +408,8 @@
 		}
 	}
 
-	.section-testimonials {
-		/* ----- Section - Testimonials -----*/
+	/*---- Section 5 - Testimonials ----- */
+	&-testimonials {
 		.testimonial-card {
 			margin-top: 1rem;
 			margin-bottom: 1rem;
@@ -440,16 +422,96 @@
 				background-repeat: no-repeat;
 				z-index: 999;
 			}
+
+			p {
+				margin-top: 0;
+			}
 		}
 	}
 
-	//
-	@include breakpoint-down("medium") {
-		.section-image {
-			height: auto;
-		}
-		.section-title {
+	/*
+    ----- PAGE: SERVICE / CSS STYLE ----- 
+    */
+
+	/*---- Section 3 - Driven by results ----- */
+	&-results {
+		.number-container {
+			// Display properties
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 1rem;
+			// Text properties
 			text-align: center;
+			text-transform: uppercase;
+			font-family: $font-stack-secondary;
+			line-height: 1rem;
+			color: $primary-color;
+
+			// Shape CSS Properties
+			width: 175px;
+			height: 175px;
+			box-sizing: content-box;
+			border: 1rem solid $secondary-color;
+			border-radius: 50%;
+
+			h2 {
+				font-size: 40px;
+			}
+			span {
+				font-weight: 700;
+			}
 		}
+
+		.card-body {
+			margin-top: 1.5rem;
+			h3 {
+				font-size: 1.5rem;
+				color: $primary-color;
+			}
+		}
+	}
+
+	/*---- Section 4 - Lets talk ----- */
+
+	&-letstalk {
+		background: $primary-color;
+		background: linear-gradient(
+			90deg,
+			hsl(215, 59%, 33%) 60%,
+			rgba(255, 92, 114, 1) 40%,
+			rgba(255, 92, 114, 1) 40%
+		);
+
+		@include breakpoint-down("medium") {
+			background: linear-gradient(
+				180deg,
+				hsl(215, 59%, 33%) 57%,
+				rgba(255, 92, 114, 1) 40%,
+				rgba(255, 92, 114, 1) 40%
+			);
+		}
+
+		a {
+			font-size: 1.5rem;
+			color: $white;
+			text-transform: uppercase;
+			display: flex;
+
+			img {
+				width: 180px;
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+
+//
+@include breakpoint-down("medium") {
+	.section-values .section-image {
+		height: auto;
+	}
+	.about-page .section-title {
+		text-align: center;
 	}
 }
