@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="theme-color" content="white" />
+		<meta name="theme-color" content="#fff" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"
+			content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=0"
 		/>
 		<meta
 			name="description"
@@ -17,45 +17,71 @@
 		/>
 		<meta name="author" content="Smidige" />
 		<meta name="robots" content="index, follow" />
-		<link rel="icon" type="image/png" sizes="16x16" href="images/logo-sign.svg" />
-		<title>Smidige</title>
-		<!-- Google font link -->
+		<link rel="icon" type="image/svg" href="images/logo-sign.svg" />
+		<link rel="apple-touch-icon" type="image/svg" href="images/logo-sign.svg" />
+		<link rel="canonical" href="https://www.smidige.com" />
+
+		<title>Smidige - a global provider of software engineering and consulting services.</title>
+
+		<!-- Bootstrap Grid CSS -->
+		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!-- Preload hero image -->
+		<link rel="preload" as="image" href="images/home-hero-img.jpeg" type="image/jpeg" />
+
+		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<!-- Bootstrap Grid CSS -->
-		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
-		<header class="hero-background hero-home">
+		<header
+			class="hero-background hero-home"
+			style="background-image: url('images/home-hero-img.jpeg')"
+		>
 			<nav class="navbar">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
 						<!-- Brand -->
-						<div class="col-md-6 col-xxl-6 navbar-brand">
+						<div class="col-10 col-md-6 col-xl-6 navbar-brand">
 							<a href="index.html"><img src="images/logo.svg" alt="Smidige" class="logo" /></a>
 							<span class="tagline">A five word tagline here maybe?</span>
 						</div>
+
+						<div class="hamburger-icon col-2 col-md-1 d-xl-none">
+							<svg
+								width="40"
+								height="30"
+								viewBox="0 0 40 30"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect width="40" height="4" fill="#fff" />
+								<rect y="13" width="40" height="4" fill="#fff" />
+								<rect x="20" y="26" width="20" height="4" fill="#fff" />
+							</svg>
+						</div>
 						<!-- Menu list -->
-						<ul class="col-md-6 col-xxl-4 nav">
-							<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+						<ul class="col-md-6 col-xl-4 nav">
+							<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 							<li class="nav-item dropdown">
 								Services
-								<img src="images/icons/arrow-down.svg" class="dropdown-icon" />
+								<img src="images/icons/arrow-down.svg" alt="dropdown" class="dropdown-icon" />
 								<div class="dropdown-content">
-									<a href="service.html" class="nav-link">IT Counsulting</a>
+									<a href="service.html" class="nav-link">IT Consulting</a>
 									<a href="service.html" class="nav-link">DevOps</a>
 								</div>
 							</li>
 							<!--  -->
 							<li class="nav-item dropdown">
 								Company
-								<img src="images/icons/arrow-down.svg" class="dropdown-icon" />
+								<img src="images/icons/arrow-down.svg" alt="dropdown" class="dropdown-icon" />
 								<div class="dropdown-content">
 									<a href="case-studies.html" class="nav-link">Case Studies</a>
 									<a href="about.html" class="nav-link">About Us</a>
@@ -78,60 +104,208 @@
 			</div>
 		</header>
 
-		<!--  -->
 		<main>
+			<!-- Section 1 - Services -->
 			<section class="section section-services">
 				<div class="container">
 					<div class="row justify-content-between">
 						<div class="col-lg-6">
 							<h1 class="section-title">What We Offer</h1>
-							<div class="tab-links p-2 pb-5">
-								<a href="#" class="subtitle text-secondary">IT Consulting</a>
-								<a href="#" class="subtitle text-gray">Software Engineering</a>
-								<a href="#" class="subtitle text-gray">Managed IT Services</a>
-								<a href="#" class="subtitle text-gray">DevOps</a>
+							<!-- TAB links -->
+							<div class="tab-links d-flex d-md-block px-xl-4" id="tab">
+								<!-- <a class="subtitle link" onclick="filterSelection('all')">All</a> -->
+								<a class="col-auto subtitle link active" onclick="filterSelection('it-consulting')"
+									>IT Consulting</a
+								>
+								<a class="col-auto subtitle link" onclick="filterSelection('software')"
+									>Software Engineering</a
+								>
+								<a class="col-auto subtitle link" onclick="filterSelection('it-services')"
+									>Managed IT Services</a
+								>
+								<a class="col-auto subtitle link" onclick="filterSelection('devops')">DevOps</a>
 							</div>
 						</div>
-						<!-- Right side -->
-						<div class="col-lg-6 col-xl-5 g-xl-0 tab-content">
-							<div>
-								<h2 class="subtitle">IT Consulting</h2>
-								<p class="line-clamp-3">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
-									egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
-									ipsum sem odio egestas metus ac.
-								</p>
-							</div>
 
-							<div class="row justify-content-between">
-								<div class="col-xl-6 my-3">
-									<div class="card">
-										<h3 class="subtitle">IT Consulting</h3>
-										<p class="line-clamp-4">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
-											egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Amet, ipsum sem odio egestas metus ac.
-										</p>
-										<a href="" class="read-more"
-											>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-										/></a>
-									</div>
+						<!-- TAB Content-->
+						<div class="col-lg-6 col-xl-5 g-xl-0 tab-content">
+							<!-- TAB Item - IT Consulting-->
+							<div class="tab-content-item show it-consulting">
+								<div>
+									<h2 class="subtitle">IT Consulting</h2>
+									<p class="line-clamp-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
+										egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+										ipsum sem odio egestas metus ac.
+									</p>
 								</div>
-								<div class="col-xl-6 my-3">
-									<div class="card">
-										<h3 class="subtitle">IT Consulting</h3>
-										<p class="line-clamp-4">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
-											egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Amet, ipsum sem odio egestas metus ac.
-										</p>
-										<a href="" class="read-more"
-											>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-										/></a>
+
+								<div class="row justify-content-between">
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">IT Consulting</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">IT Consulting</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- // TAB Item -->
+
+							<!-- TAB Item - Software engineering -->
+							<div class="tab-content-item software">
+								<div>
+									<h2 class="subtitle">Software engineering</h2>
+									<p class="line-clamp-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
+										egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+										ipsum sem odio egestas metus ac.
+									</p>
+								</div>
+
+								<div class="row justify-content-between">
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">Software engineering</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">Software engineering</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // TAB Item -->
+
+							<!-- TAB Item - Managed IT Services -->
+							<div class="tab-content-item it-services">
+								<div>
+									<h2 class="subtitle">Managed IT Services</h2>
+									<p class="line-clamp-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
+										egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+										ipsum sem odio egestas metus ac.
+									</p>
+								</div>
+
+								<div class="row justify-content-between">
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">Managed IT Services</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">Managed IT Services</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // TAB Item -->
+
+							<!-- TAB Item - Devops -->
+							<div class="tab-content-item devops">
+								<div>
+									<h2 class="subtitle">DevOps</h2>
+									<p class="line-clamp-3">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem odio
+										egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
+										ipsum sem odio egestas metus ac.
+									</p>
+								</div>
+
+								<div class="row justify-content-between">
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">DevOps</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+									<div class="col-md-6 col-lg-12 col-xl-6 my-3">
+										<div class="card">
+											<h3 class="subtitle">DevOps</h3>
+											<p class="line-clamp-4">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, ipsum sem
+												odio egestas metus ac. Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit. Amet, ipsum sem odio egestas metus ac.
+											</p>
+											<a href="service.html" class="read-more">
+												Read more
+												<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // TAB Item -->
 						</div>
+						<!-- // TAB Content -->
 					</div>
 				</div>
 			</section>
@@ -141,7 +315,7 @@
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
 						<h1 class="section-title col-md-4 mb-0">Our Clients</h1>
-						<div class="col-md-8 d-flex justify-content-between align-items-center">
+						<div class="col-md-8 d-flex justify-content-between align-items-center logos-container">
 							<img
 								src="images/clients/client-1.png"
 								alt="Forbes partner of Smidige"
@@ -181,15 +355,16 @@
 								</p>
 
 								<div class="my-5">
-									<a href="about.html" class="read-more col-3"
-										>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-									/></a>
+									<a href="about.html" class="read-more">
+										Read more
+										<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+									</a>
 								</div>
 							</div>
 						</div>
 						<!--  -->
 						<div class="col-lg-6 image-container g-0">
-							<img src="images/about-us.png" alt="Smidige" class="section-image" />
+							<img src="images/about-us.jpeg" alt="Smidige" class="section-image" />
 						</div>
 					</div>
 				</div>
@@ -234,15 +409,15 @@
 			<section class="section section-case-studies">
 				<div class="container">
 					<div class="row px-md-3">
-						<h1 class="section-title mb-md-5 px-md-0">Case Studies</h1>
+						<h1 class="section-title mb-4 mb-md-5 px-md-0">Case Studies</h1>
 
-						<article class="col-md-6 g-0 case-item">
+						<article class="col-lg-6 g-0 case-item">
 							<img
 								src="images/case-studies/case-1.png"
 								alt="Forbes partner of Smidige"
 								class="case-item-img"
 							/>
-							<div class="col-xl-6 case-item-text">
+							<div class="col-10 col-xxl-6 case-item-text">
 								<h2 class="subtitle">Case Study 1</h2>
 								<p>
 									Smidige is a truly global provider of software engineering and consulting
@@ -250,19 +425,20 @@
 									while our US and European offices house 3,000+ professionals working daily to
 									deliver business value through technology.
 								</p>
-								<a href="#" class="read-more"
-									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-								/></a>
+								<a href="case-study-post.html" class="read-more">
+									Read more
+									<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+								</a>
 							</div>
 						</article>
 
-						<article class="col-md-6 g-0 case-item">
+						<article class="col-lg-6 g-0 case-item">
 							<img
 								src="images/case-studies/case-2.png"
 								alt="Forbes partner of Smidige"
 								class="case-item-img"
 							/>
-							<div class="col-xl-6 case-item-text">
+							<div class="col-10 col-xxl-6 case-item-text">
 								<h2 class="subtitle">Case Study 2</h2>
 								<p>
 									Smidige is a truly global provider of software engineering and consulting
@@ -270,19 +446,20 @@
 									while our US and European offices house 3,000+ professionals working daily to
 									deliver business value through technology.
 								</p>
-								<a href="#" class="read-more"
-									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-								/></a>
+								<a href="case-study-post.html" class="read-more">
+									Read more
+									<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+								</a>
 							</div>
 						</article>
 
-						<article class="col-md-6 g-0 case-item">
+						<article class="col-lg-6 g-0 case-item">
 							<img
 								src="images/case-studies/case-3.png"
 								alt="Forbes partner of Smidige"
 								class="case-item-img"
 							/>
-							<div class="col-xl-6 case-item-text">
+							<div class="col-10 col-xxl-6 case-item-text">
 								<h2 class="subtitle">Case Study 3</h2>
 								<p>
 									Smidige is a truly global provider of software enigeering and consulting servies.
@@ -290,19 +467,20 @@
 									US European offices house 3,000+ professionals working daily to deliver business
 									value through technology.
 								</p>
-								<a href="#" class="read-more"
-									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-								/></a>
+								<a href="case-study-post.html" class="read-more">
+									Read more
+									<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+								</a>
 							</div>
 						</article>
 
-						<article class="col-md-6 g-0 case-item">
+						<article class="col-lg-6 g-0 case-item">
 							<img
 								src="images/case-studies/case-4.png"
 								alt="Forbes partner of Smidige"
 								class="case-item-img"
 							/>
-							<div class="col-xl-6 case-item-text">
+							<div class="col-10 col-xxl-6 case-item-text">
 								<h2 class="subtitle">Case Study 4</h2>
 								<p>
 									Smidige is a truly global provider of software enigeering and consulting servies.
@@ -310,9 +488,10 @@
 									US European offices house 3,000+ professionals working daily to deliver business
 									value through technology.
 								</p>
-								<a href="#" class="read-more"
-									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-								/></a>
+								<a href="case-study-post.html" class="read-more">
+									Read more
+									<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+								</a>
 							</div>
 						</article>
 					</div>
@@ -325,20 +504,20 @@
 					<div class="row justify-content-between">
 						<h1 class="section-title">Get in Touch</h1>
 						<!-- Contact Details -->
-						<div class="col-md-5 col-xl-3 mt-xl-4 d-flex d-md-block">
+						<div class="col-md-4 col-xl-3 mt-xl-4 d-flex d-md-block">
 							<div class="col-6 col-md-12 addresses">
 								<h2>Norway</h2>
-								<strong>123 456 6789</strong>
+								<strong><a href="tel:123 456 6789"> 123 456 6789</a></strong>
 								<p class="mt-0">Sales inquiries</p>
 							</div>
-							<div class="col-6 col-md-12 mt-xl-5 addresses">
+							<div class="col-6 col-md-12 addresses">
 								<h2>United States</h2>
-								<strong>123 456 6789</strong>
-								<p class="mt-0">Sales inquiries</p>
+								<strong><a href="tel:123 456 6789"> 123 456 6789</a></strong>
+								<p class="mt-0">General inquiries</p>
 							</div>
 						</div>
 						<!-- Contact Form -->
-						<div class="col-md-7 col-xl-9 mt-3 mt-xl-4">
+						<div class="col-md-8 col-xl-9 mt-3 mt-xl-4">
 							<form action="" method="POST" class="row form-group">
 								<div class="col-lg-6">
 									<input
@@ -390,8 +569,9 @@
 								</div>
 								<p class="col-md-12 mb-4">
 									Please be informed that when you click the Send button Smidige will process your
-									personal data in accordance with our Privacy notice for the purpose of providing
-									you with appropriate information.
+									personal data in accordance with our
+									<a href="privacy.html">Privacy notice </a> for the purpose of providing you with
+									appropriate information.
 								</p>
 								<div class="button-container">
 									<button type="submit" name="submit" class="button button-primary col-6 col-xl-3">
@@ -408,16 +588,16 @@
 		<footer>
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-3 mb-2 mb-md-0">
+					<div class="col-lg-3 mb-2 mb-md-0">
 						<img src="images/logo-footer.svg" alt="Smidige" />
 					</div>
-					<div class="col-md-9 mt-4 mt-md-0">
-						<div class="row">
+					<div class="col-lg-9 mt-4 mt-md-0">
+						<div class="row align-items-center pt-5 pt-lg-0">
 							<div class="col-md-6 social-media-icons ps-lg-5">
-								<a href="" target="_blank">
+								<a href="images/icons/linkedin.svg" target="_blank">
 									<img src="images/icons/facebook.svg" alt="Smidige - Facebook" />
 								</a>
-								<a href="" target="_blank">
+								<a href="images/icons/linkedin.svg" target="_blank">
 									<img src="images/icons/instagram.svg" alt="Smidige - Instagram" />
 								</a>
 								<a href="https://www.linkedin.com/company/smidige/about/" target="_blank">
@@ -434,5 +614,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="js/main.js"></script>
 	</body>
 </html>

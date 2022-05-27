@@ -102,11 +102,17 @@ body {
 .text-left {
 	text-align: left !important;
 }
+.text-right {
+	text-align: right !important;
+}
 .text-center {
 	text-align: center !important;
 }
-.text-right {
-	text-align: right !important;
+
+@include breakpoint-down("medium") {
+	.text-sm-center {
+		text-align: center;
+	}
 }
 
 /* Typography utility */
@@ -120,15 +126,12 @@ h6,
 .section-title,
 .subtitle {
 	font-family: $font-stack-secondary;
+	-webkit-font-smoothing: antialiased;
 }
 
 .subtitle {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	font-weight: 500;
-
-	@include breakpoint-down("large") {
-		font-size: 1.5rem;
-	}
 }
 
 // Clamp lines to not showing all text

@@ -3,47 +3,77 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="theme-color" content="white" />
+		<meta name="theme-color" content="#fff" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"
+			content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=0"
 		/>
 		<meta
 			name="description"
-			content="Smidige is a truly global provider of software engineering and consulting services. The geography of our projects extends across 40 countries and counting, while our US and European offices house 3,000+ professionals working daily to deliver business value through technology."
+			content="Smidige is a truly global provider of software engineering and consulting
+		services. The geography of our projects extends across 40 countries and counting,
+		while our US and European offices house 3,000+ professionals working daily to
+		deliver business value through technology."
 		/>
 		<meta name="author" content="Smidige" />
 		<meta name="robots" content="index, follow" />
-		<link rel="icon" type="image/svg" sizes="16x16" href="images/logo-sign.svg" />
-		<title>Service - Smidige</title>
-		<!-- Google font link -->
+		<link rel="icon" type="image/svg" href="images/logo-sign.svg" />
+		<link rel="apple-touch-icon" type="image/svg" href="images/logo-sign.svg" />
+		<link rel="canonical" href="https://www.smidige.com" />
+
+		<title>
+			Services - Smidige is a truly global provider of software engineering and consulting services.
+		</title>
+
+		<!-- Bootstrap Grid CSS -->
+		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!-- Preload hero image -->
+		<link rel="preload" as="image" href="images/services-hero-img.png" type="image/png" />
+
+		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
-		<!-- Bootstrap Grid CSS -->
-		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
-		<!-- Main CSS -->
-		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
-		<header class="hero-background hero-service">
+		<header
+			class="hero-background hero-service"
+			style="background-image: url('images/services-hero-img.png')"
+		>
 			<nav class="navbar">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
 						<!-- Brand -->
-						<div class="col-md-6 col-xxl-6 navbar-brand">
+						<div class="col-10 col-md-6 col-xl-6 navbar-brand">
 							<a href="index.html"><img src="images/logo.svg" alt="Smidige" class="logo" /></a>
 							<span class="tagline">A five word tagline here maybe?</span>
 						</div>
+
+						<div class="hamburger-icon col-2 col-md-1 d-xl-none">
+							<svg
+								width="40"
+								height="30"
+								viewBox="0 0 40 30"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect width="40" height="4" fill="#fff" />
+								<rect y="13" width="40" height="4" fill="#fff" />
+								<rect x="20" y="26" width="20" height="4" fill="#fff" />
+							</svg>
+						</div>
 						<!-- Menu list -->
-						<ul class="col-xxl-4 nav menu-list">
+						<ul class="col-md-6 col-xl-4 nav">
 							<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 							<li class="nav-item dropdown">
 								Services
-								<img src="images/icons/arrow-down.svg" class="dropdown-icon" />
+								<img src="images/icons/arrow-down.svg" alt="dropdown" class="dropdown-icon" />
 								<div class="dropdown-content">
 									<a href="service.html" class="nav-link">IT Consulting</a>
 									<a href="service.html" class="nav-link">DevOps</a>
@@ -51,7 +81,8 @@
 							</li>
 							<!--  -->
 							<li class="nav-item dropdown">
-								Company <img src="images/icons/arrow-down.svg" class="dropdown-icon" />
+								Company
+								<img src="images/icons/arrow-down.svg" alt="dropdown" class="dropdown-icon" />
 								<div class="dropdown-content">
 									<a href="case-studies.html" class="nav-link">Case Studies</a>
 									<a href="about.html" class="nav-link">About Us</a>
@@ -72,11 +103,12 @@
 				</div>
 			</div>
 		</header>
-		<main class="service-page">
-			<!-- Section 1 - -->
+
+		<main class="main">
+			<!-- Section 1 - Characteristics -->
 			<section class="section section-characteristics">
 				<div class="container">
-					<div class="row justify-content-between align-items-center">
+					<div class="row justify-content-between">
 						<div class="col-md-6">
 							<h1 class="section-title">Key directions of software consulting</h1>
 						</div>
@@ -92,9 +124,9 @@
 						</div>
 					</div>
 					<!--  -->
-					<div class="row justify-content-between align-items-center pt-xl-3 mt-5">
-						<div class="col-md-4">
-							<div class="card px-xl-0">
+					<div class="row justify-content-between pt-xl-3 mt-5">
+						<div class="col-lg-4">
+							<div class="card px-0">
 								<h2 class="subtitle">Software Implementation Strategy</h2>
 								<p class="col-xl-8 mx-auto">
 									We help companies draw up their short- and long-term software implementation
@@ -103,8 +135,8 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="card px-xl-0">
+						<div class="col-lg-4">
+							<div class="card px-0">
 								<h2 class="subtitle">Technology advisory services</h2>
 								<p class="col-xl-8 mx-auto">
 									Smidige's software consultants assist our customers in selecting the right
@@ -114,8 +146,8 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="card px-xl-0">
+						<div class="col-lg-4">
+							<div class="card px-0">
 								<h2 class="subtitle">Business solution consulting</h2>
 								<p class="col-xl-8 mx-auto">
 									Smidige's software consultants assist our customers in selecting the right
@@ -144,7 +176,7 @@
 							</p>
 						</div>
 						<!--  -->
-						<div class="col-lg-7 pt-3">
+						<div class="col-lg-7 pt-3 px-xxl-5">
 							<div class="card mb-4">
 								<h2 class="subtitle text-secondary">1. IDEA TO TECHNOLOGY</h2>
 								<p>
@@ -191,8 +223,8 @@
 					</div>
 
 					<!-- Results -->
-					<div class="row justify-content-between mt-5">
-						<div class="col-md-4">
+					<div class="row justify-content-between mt-md-5 pt-3">
+						<div class="col-md-11 col-lg-4">
 							<div class="card">
 								<div class="number-container ms-5 mt-3">
 									<h2>30%</h2>
@@ -213,7 +245,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-4">
+						<div class="col-md-11 col-lg-4">
 							<div class="card">
 								<div class="number-container ms-5 mt-3">
 									<div class="text">
@@ -236,11 +268,14 @@
 							</div>
 						</div>
 
-						<div class="col-md-4">
+						<div class="col-md-11 col-lg-4">
 							<div class="card">
 								<div class="number-container ms-5 mt-3">
 									<h2>20%</h2>
-									<span>Lower tech debt</span>
+									<span
+										>Lower tech <br />
+										debt</span
+									>
 								</div>
 								<div class="card-body pe-xl-5">
 									<h3>Software ecosystem revamp for a retail chain</h3>
@@ -261,12 +296,12 @@
 			<section class="section section-letstalk">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
-						<div class="col-md-7">
-							<h2 class="subtitle text-white">
+						<div class="col-md-8 col-xl-7">
+							<h1 class="text-white">
 								Do you want your software investment to bring tangible results?
-							</h2>
+							</h1>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-xl-4">
 							<a href="contact.html" class="subtitle mt-5 mt-lg-0"
 								>Let's
 								<br />
@@ -282,34 +317,36 @@
 			<section class="section section-case-studies">
 				<div class="container">
 					<div class="row px-md-3">
-						<h1 class="section-title mb-md-5 px-md-0">Case Studies</h1>
+						<h1 class="section-title mb-4 mb-md-5 px-md-0">Case Studies</h1>
 
-						<article class="col-md-6 case-item g-0">
+						<article class="col-lg-6 g-0 case-item">
 							<img
 								src="images/case-studies/case-1.png"
-								alt="Forbes partned pf Smidige"
+								alt="Forbes partner of Smidige"
 								class="case-item-img"
 							/>
-							<div class="col-9 col-lg-6 case-item-text">
+							<div class="col-10 col-xxl-6 case-item-text">
 								<h2 class="subtitle">Case Study 1</h2>
 								<p>
 									Smidige is a truly global provider of software engineering and consulting
-									services. The geopgraphy of our projects extend across 40 countries and counting,
-									while our US and European offices houses 3,000+ professionals working daily to
+									services. The geography of our projects extends across 40 countries and counting,
+									while our US and European offices house 3,000+ professionals working daily to
 									deliver business value through technology.
 								</p>
-								<a href="case-studies.html" class="read-more"
-									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-								/></a>
+								<a href="case-study-post.html" class="read-more">
+									Read more
+									<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+								</a>
 							</div>
 						</article>
-						<article class="col-md-6 g-0 case-item">
+
+						<article class="col-lg-6 g-0 case-item">
 							<img
 								src="images/case-studies/case-2.png"
 								alt="Forbes partner of Smidige"
 								class="case-item-img"
 							/>
-							<div class="col-9 col-lg-6 case-item-text">
+							<div class="col-10 col-xxl-6 case-item-text">
 								<h2 class="subtitle">Case Study 2</h2>
 								<p>
 									Smidige is a truly global provider of software engineering and consulting
@@ -317,9 +354,10 @@
 									while our US and European offices house 3,000+ professionals working daily to
 									deliver business value through technology.
 								</p>
-								<a href="case-studies.html" class="read-more"
-									>Read more <img src="images/icons/arrow-right.svg" alt="arrow-right"
-								/></a>
+								<a href="case-study-post.html" class="read-more">
+									Read more
+									<img src="images/icons/arrow-right.svg" alt="arrow-right" />
+								</a>
 							</div>
 						</article>
 					</div>
@@ -332,20 +370,20 @@
 					<div class="row justify-content-between">
 						<h1 class="section-title">Get in Touch</h1>
 						<!-- Contact Details -->
-						<div class="col-md-5 col-xl-3 mt-xl-4 d-flex d-md-block">
+						<div class="col-md-4 col-xl-3 mt-xl-4 d-flex d-md-block">
 							<div class="col-6 col-md-12 addresses">
 								<h2>Norway</h2>
-								<strong>123 456 6789</strong>
+								<strong><a href="tel:123 456 6789"> 123 456 6789</a></strong>
 								<p class="mt-0">Sales inquiries</p>
 							</div>
-							<div class="col-6 col-md-12 mt-xl-5 addresses">
+							<div class="col-6 col-md-12 addresses">
 								<h2>United States</h2>
-								<strong>123 456 6789</strong>
-								<p class="mt-0">Sales inquiries</p>
+								<strong><a href="tel:123 456 6789"> 123 456 6789</a></strong>
+								<p class="mt-0">General inquiries</p>
 							</div>
 						</div>
 						<!-- Contact Form -->
-						<div class="col-md-7 col-xl-9 mt-3 mt-xl-4">
+						<div class="col-md-8 col-xl-9 mt-3 mt-xl-4">
 							<form action="" method="POST" class="row form-group">
 								<div class="col-lg-6">
 									<input
@@ -397,8 +435,9 @@
 								</div>
 								<p class="col-md-12 mb-4">
 									Please be informed that when you click the Send button Smidige will process your
-									personal data in accordance with our Privacy notice for the purpose of providing
-									you with appropriate information.
+									personal data in accordance with our
+									<a href="privacy.html">Privacy notice </a> for the purpose of providing you with
+									appropriate information.
 								</p>
 								<div class="button-container">
 									<button type="submit" name="submit" class="button button-primary col-6 col-xl-3">
@@ -415,16 +454,16 @@
 		<footer>
 			<div class="container">
 				<div class="row justify-content-between">
-					<div class="col-md-3 mb-2 mb-md-0">
+					<div class="col-lg-3 mb-2 mb-md-0">
 						<img src="images/logo-footer.svg" alt="Smidige" />
 					</div>
-					<div class="col-md-9 mt-4 mt-md-0">
-						<div class="row">
+					<div class="col-lg-9 mt-4 mt-md-0">
+						<div class="row align-items-center pt-5 pt-lg-0">
 							<div class="col-md-6 social-media-icons ps-lg-5">
-								<a href="" target="_blank">
+								<a href="images/icons/linkedin.svg" target="_blank">
 									<img src="images/icons/facebook.svg" alt="Smidige - Facebook" />
 								</a>
-								<a href="" target="_blank">
+								<a href="images/icons/linkedin.svg" target="_blank">
 									<img src="images/icons/instagram.svg" alt="Smidige - Instagram" />
 								</a>
 								<a href="https://www.linkedin.com/company/smidige/about/" target="_blank">
@@ -441,5 +480,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="js/main.js"></script>
 	</body>
 </html>
