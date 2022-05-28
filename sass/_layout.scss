@@ -68,6 +68,21 @@
 			display: block;
 		}
 
+		// Chevron down - Icon
+		&::after {
+			display: inline-block;
+			content: "";
+			position: relative;
+			border-style: solid;
+			border-width: 0.15rem 0.15rem 0 0;
+			width: 0.5rem;
+			height: 0.5rem;
+			left: 1rem;
+			top: 0.3rem;
+			transform: rotate(135deg);
+			vertical-align: top;
+		}
+
 		&-content {
 			display: none;
 			position: absolute;
@@ -89,10 +104,6 @@
 					text-decoration: underline;
 				}
 			}
-		}
-
-		&-icon {
-			vertical-align: middle;
 		}
 	}
 
@@ -138,9 +149,7 @@
 
 				&-item {
 					color: $primary-color;
-					margin-top: 1rem;
-					padding: 0.5rem;
-					font-size: 1.2rem;
+					padding: 1rem;
 					width: 100%;
 
 					.dropdown-content {
@@ -150,7 +159,6 @@
 
 				&-link {
 					color: $primary-color;
-					font-size: 1.2rem;
 				}
 			}
 		}
@@ -175,6 +183,7 @@ footer {
 
 	// ----- Medium devices
 	@include breakpoint-down("medium") {
+		text-align: center;
 		background: $secondary-color;
 		background: linear-gradient(
 			180deg,
@@ -182,7 +191,6 @@ footer {
 			rgba(255, 92, 114, 1) 35%,
 			rgba(255, 92, 114, 1) 65%
 		);
-		text-align: center;
 	}
 
 	@include breakpoint-up("medium") {

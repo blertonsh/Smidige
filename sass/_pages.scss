@@ -208,10 +208,6 @@
 	/* ----- Section 2  - Clients -----  */
 
 	&-clients {
-		.logos-container {
-			overflow-x: scroll;
-		}
-
 		&-logo {
 			/* Set specific widh and height to client logos*/
 			max-width: 224px;
@@ -228,6 +224,11 @@
 
 		@include breakpoint-down("medium") {
 			padding-top: 0;
+
+			.logos-container {
+				overflow-x: scroll;
+				margin-top: 1.5rem;
+			}
 
 			.logo {
 				display: flex;
@@ -512,11 +513,12 @@
 				bottom: 0;
 				border-radius: 50%;
 				border: 12px solid transparent;
+				background: $secondary-color;
 				background: linear-gradient(225deg, #44638e 15%, #ff5c72 60%) border-box;
 				mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 				-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 				-webkit-mask-composite: destination-out;
-				mask-composite: destination-out;
+				mask-composite: exclude;
 			}
 
 			h2 {
