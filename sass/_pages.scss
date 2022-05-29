@@ -1,21 +1,42 @@
-// ---- Home page -----
+/* --------------------------
+			PAGES 
+/* --------------------------*/
 
-// Header - Home Background image
-
+/* Page : Index */
 .hero-background {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: relative;
+
+	.hero-text {
+		margin-top: 10%;
+
+		/* Set the font smaller and align intems center in devices from tablet to small phones*/
+		@include breakpoint-down("medium") {
+			text-align: center;
+			margin-top: 20%;
+		}
+
+		// Change font-family of, size, foont weight  to bold
+		.hero-title {
+			font-family: $font-stack-secondary;
+			font-size: 68px;
+			text-transform: capitalize;
+			color: $white;
+			margin-bottom: 3rem;
+
+			@include breakpoint-down("large") {
+				font-size: 52px;
+				line-height: 1.4;
+				word-wrap: break-word;
+			}
+		}
+	}
 }
 
 .hero-home {
-	background-image: url("../images/home-hero-img.jpeg");
 	min-height: 85vh;
-
-	.hero-text {
-		margin-top: 18%;
-	}
 
 	@include breakpoint-range("medium", "large") {
 		min-height: 50vh !important;
@@ -23,6 +44,11 @@
 
 	@include breakpoint-down("small") {
 		min-height: 100vh !important;
+	}
+
+	// Margin top the text
+	.hero-text {
+		margin-top: 18%;
 	}
 }
 
@@ -62,34 +88,9 @@
 	background-image: url("../images/career-hero-img.png");
 }
 
-.hero-text {
-	margin-top: 10%;
-
-	/* Set the font smaller and align intems center in devices from tablet to small phones*/
-	@include breakpoint-down("medium") {
-		text-align: center;
-		margin-top: 20%;
-	}
-
-	// Change font-family of, size, foont weight  to bold
-	.hero-title {
-		font-family: $font-stack-secondary;
-		font-size: 68px;
-		text-transform: capitalize;
-		color: $white;
-		margin-bottom: 3rem;
-
-		@include breakpoint-down("large") {
-			font-size: 52px;
-			line-height: 1.4;
-			word-wrap: break-word;
-		}
-	}
-}
-
 /*
     ----- Sections ----- 
-    */
+*/
 .section {
 	padding: 4rem 0;
 
@@ -106,7 +107,7 @@
 		font-weight: 300;
 	}
 
-	// Make read more link uppercase, smaller
+	// Make 'read more' link uppercase, and smaller font
 	a.read-more {
 		margin-top: 1rem;
 		text-transform: uppercase;
@@ -116,18 +117,18 @@
 		color: $primary-color;
 		transition: all 200ms ease-out;
 
+		img {
+			/* Give space left to the 'arrow' icon*/
+			margin-left: 1rem;
+			transition: all 200ms ease-out;
+		}
+
 		&:hover {
 			color: $secondary-color;
 			img {
 				/*Scale the arrow right icon when it's hover*/
 				transform: scale(1.2);
 			}
-		}
-
-		img {
-			/* Give space left to the 'arrow' icon*/
-			margin-left: 1rem;
-			transition: all 200ms ease-out;
 		}
 	}
 
@@ -152,6 +153,7 @@
 	/* ----- Section 1 - Services -----  */
 	&-services {
 		@include breakpoint-up("large") {
+			min-height: 70vh;
 			background: $secondary-color;
 			background: linear-gradient(
 				90deg,
@@ -159,7 +161,6 @@
 				rgba(255, 92, 114, 1) 50%,
 				rgba(255, 92, 114, 1) 100%
 			);
-			min-height: 70vh;
 		}
 
 		.tab-links .subtitle {
@@ -167,8 +168,9 @@
 
 			// Set a smaller font in small devices and display flex
 			@include breakpoint-down("medium") {
-				font-size: 1.2rem;
+				font-size: 24px;
 				margin-right: 2rem;
+				margin-bottom: 0.5rem;
 			}
 		}
 
@@ -210,8 +212,8 @@
 	&-clients {
 		&-logo {
 			/* Set specific widh and height to client logos*/
-			max-width: 224px;
-			max-height: 32px;
+			// max-width: 224px;
+			// max-height: 32px;
 			margin-top: 1rem;
 			margin-bottom: 1rem;
 			padding-right: 1.5rem;
@@ -469,9 +471,6 @@
 			}
 		}
 	}
-	/*
-     // END OF PAGE: ABOUT US / CSS STYLE ----- 
-    */
 
 	/*
     ----- PAGE: SERVICE / CSS STYLE ----- 
@@ -574,20 +573,14 @@
 	}
 
 	/*
-     // END OF PAGE: CAREER / CSS STYLE ----- 
-    */
-
-	/*
     ----- PAGE: CAREER / CSS STYLE ----- 
     */
-
-	/*---- Section 1 - JOB POSITIONS ----- */
 	&-positions {
 		min-height: 100vh;
 	}
 }
 
-//
+// ------ Responsive queries-------
 @include breakpoint-down("medium") {
 	.section-values .section-image {
 		height: auto;

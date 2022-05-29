@@ -1,4 +1,8 @@
-/* ----- Toggle menu on Mobile Device ----- */
+
+/* --------------------------
+	Toggle menu on Mobile Device
+/* --------------------------*/
+
 const hamburger = document.querySelector(".hamburger-icon");
 const navMenu = document.querySelector(".navbar");
 
@@ -8,9 +12,31 @@ function mobileMenu() {
 	navMenu.classList.toggle("toggled");
 }
 
-/* ----- Filter elements function ----- */
-// filterSelection("all");
 
+/* --------------------------
+	Dropdown menu - Toggle
+/* --------------------------*/
+document.addEventListener('click', e => {
+	const isDropdownLink = e.target.matches('.dropdown-link');
+	if(!isDropdownLink && e.target.closest('.dropdown') != null) return;
+
+	let currentDropdown;
+
+	if(isDropdownLink) {
+		currentDropdown = e.target.closest('.dropdown');
+		currentDropdown.classList.toggle('active');
+	}
+
+	document.querySelectorAll(".dropdown.active").forEach(dropdown => {
+		if(dropdown === currentDropdown) return
+		dropdown.classList.remove('active');
+	})
+})
+
+
+/* --------------------------
+	Filter elements - Tab content Component
+/* --------------------------*/
 function filterSelection(c) {
 	var x, i;
 	x = document.getElementsByClassName("tab-content-item");

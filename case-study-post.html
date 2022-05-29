@@ -63,19 +63,22 @@
 							</svg>
 						</div>
 						<!-- Menu list -->
-						<ul class="col-md-6 col-xl-4 nav">
+						<ul class="col-md-6 col-xl-4 nav" role="navigation">
 							<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-							<li class="nav-item dropdown">
-								Services
-								<div class="dropdown-content">
+							<li class="nav-item dropdown" aria-haspopup="true">
+								<!-- Services -->
+								<a class="dropdown-link">Services</a>
+								<div class="dropdown-menu" aria-label="submenu">
 									<a href="service.html" class="nav-link">IT Consulting</a>
 									<a href="service.html" class="nav-link">DevOps</a>
 								</div>
 							</li>
 							<!--  -->
-							<li class="nav-item dropdown">
-								Company
-								<div class="dropdown-content">
+
+							<!-- Company -->
+							<li class="nav-item dropdown" aria-haspopup="true">
+								<a class="dropdown-link">Company</a>
+								<div class="dropdown-menu" aria-label="submenu">
 									<a href="case-studies.html" class="nav-link">Case Studies</a>
 									<a href="about.html" class="nav-link">About Us</a>
 									<a href="careers.html" class="nav-link">Careers</a>

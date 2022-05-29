@@ -1,15 +1,14 @@
 /* --------------------------
-  * :::: COMPONENTS ::::
+			COMPONENTS 
 /* --------------------------*/
 
 /*
- ---- Buttons----
+ ---- Buttons ----
  */
 .button {
 	padding: $btn-padding-y $btn-padding-x;
 	border: 0;
 	border-radius: $btn-radius;
-	opacity: 1;
 	font-family: $font-stack-secondary;
 	font-size: $btn-font-size;
 	font-weight: 600;
@@ -17,17 +16,17 @@
 	letter-spacing: 1px;
 	vertical-align: middle;
 	cursor: pointer;
+	opacity: 1;
 	transition: all 200ms linear;
 
 	&:hover {
-		// color: #fff;
 		opacity: 0.95;
-		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+		box-shadow: $btn-shadow;
 	}
 
 	&:focus,
 	&.focus {
-		box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+		box-shadow: $btn-shadow;
 	}
 
 	&-primary {
@@ -68,22 +67,18 @@
  ---- Inputs ----
  */
 .input-default {
-	// display: block;
 	width: 100%;
 	margin-bottom: 1rem;
 	padding: $input-padding-y $input-padding-x;
 	outline-color: $secondary-color;
-	outline: none;
 	background: transparent;
 	background-clip: padding-box;
 	border: 1px solid $input-border;
 	color: $input-txt-color;
 	font-size: $input-font-size;
 	font-weight: 300;
-	line-height: 1.5;
-
 	border-radius: $input-border-radius;
-	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 	&:focus {
 		border-color: $secondary-color;
@@ -92,17 +87,14 @@
 
 	@include input-placeholder {
 		color: $gray;
-		// color: $input-color ;
 	}
 }
 
+// Disable resize on textarea
 textarea {
 	resize: none;
 }
 
-.border-right {
-	border-right: 2px solid $gray;
-}
 /*
  ---- Tab ----
  */
@@ -110,6 +102,7 @@ textarea {
 	overflow: hidden;
 	margin: 1rem 0;
 
+	// Scroll horizontal on small devices when the content extends full width
 	@include breakpoint-down("small") {
 		overflow-x: scroll;
 	}
@@ -127,7 +120,6 @@ textarea {
 	background: transparent;
 
 	@include breakpoint-down("small") {
-		// padding: 0.5rem 1rem;
 		font-size: $font-base-size-sm;
 	}
 }
@@ -136,25 +128,27 @@ textarea {
 /* Create an active/current tablink class */
 .tab-links .link:hover,
 .tab-links .link.active {
-	// color: $secondary-color;
 	color: $black;
 }
 
+/*Section Service - Set the color pink to the active tab link*/
 .section-services .tab-links .link:hover,
 .section-services .tab-links .link.active {
 	color: $secondary-color;
 }
 
-/* Style the tab content */
+/* Tab content */
 .tab-content {
 	padding-top: 1rem;
 	background: transparent;
 
+	// Hide items by default then only show when selected
 	&-item {
 		display: none;
 		transition: all 0.3s ease-out;
 	}
 
+	// This is for Page : Careers / Positions
 	details {
 		padding: 1rem 1.5rem;
 		margin-bottom: 1rem;
@@ -168,20 +162,26 @@ textarea {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
 		cursor: pointer;
+
+		// Remove default arrow marker
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		h4,
+		.apply-link {
+			font-weight: 500;
+			font-size: 14px;
+		}
 
 		// Job title
 		h4 {
-			font-size: 14px;
-			font-weight: 500;
 			text-transform: uppercase;
 		}
 
 		.apply-link {
 			font-family: $font-stack-secondary;
-			font-weight: 500;
-			font-size: 14px;
 			color: $black;
 
 			img {
@@ -190,16 +190,14 @@ textarea {
 		}
 	}
 
+	// Detail content
 	.job-description {
 		margin-top: 1rem;
 		font-weight: 300;
 	}
 }
+
 /* The "show" class is added to the filtered elements */
 .show {
 	display: block;
-}
-
-.section-positions {
-	min-height: 80vh;
 }
